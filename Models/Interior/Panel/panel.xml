@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.383 </y-m>
+      <z-m>  0.133 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.283 </y-m>
+      <z-m>  0.133 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.181 </y-m>
+      <z-m>  0.133 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KI206 -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/ki206/ki206.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.077 </y-m>
+      <z-m>  0.031 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/rpm/rpm.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.483 </y-m>
+      <z-m>  0.074 </z-m>
+    </offsets>
+  </model>
+
+  <!-- HDG -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/hdg/hdg.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.283 </y-m>
+      <z-m>  0.033 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Turn -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.383 </y-m>
+      <z-m>  0.033 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -1.265 </x-m>
+      <y-m> -0.181 </y-m>
+      <z-m>  0.033 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Toutes les visses -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/full-vis.xml</path>
+  </model>
+
+</PropertyList>
+

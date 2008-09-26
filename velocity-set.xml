@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!-- <PropertyList include="velocity-jsbsim-cnf.xml"> -->
+<PropertyList include="velocity-yasim-cnf.xml">
+
+  <sim>
+    <description>Velocity XL</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+  </sim>
+  
+   <!--<nasal>
+    <kap140>	   
+     <file>Aircraft/Generic/kap140.nas</file>
+    </kap140> 
+   </nasal>-->
+
+</PropertyList>
+

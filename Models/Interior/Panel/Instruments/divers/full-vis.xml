@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.422 </y-m>
+      <z-m>  0.166 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.422 </y-m>
+      <z-m>  0.102 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.344 </y-m>
+      <z-m>  0.166 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.344 </y-m>
+      <z-m>  0.102 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.321 </y-m>
+      <z-m>  0.166 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.321 </y-m>
+      <z-m>  0.102 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.243 </y-m>
+      <z-m>  0.166 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.243 </y-m>
+      <z-m>  0.102 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.219 </y-m>
+      <z-m>  0.166 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.219 </y-m>
+      <z-m>  0.102 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.141 </y-m>
+      <z-m>  0.166 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.141 </y-m>
+      <z-m>  0.102 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.321 </y-m>
+      <z-m>  0.064 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.321 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.243 </y-m>
+      <z-m>  0.064 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.243 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.521 </y-m>
+      <z-m>  0.105 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.521 </y-m>
+      <z-m>  0.041 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.444 </y-m>
+      <z-m>  0.105 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.444 </y-m>
+      <z-m>  0.041 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.116 </y-m>
+      <z-m>  0.062 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.116 </y-m>
+      <z-m>  0.002 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.038 </y-m>
+      <z-m>  0.062 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.038 </y-m>
+      <z-m>  0.002 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.422 </y-m>
+      <z-m>  0.064 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.422 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.344 </y-m>
+      <z-m>  0.064 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.344 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.219 </y-m>
+      <z-m>  0.064 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.219 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.141 </y-m>
+      <z-m>  0.064 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/divers/vis.xml</path>
+    <offsets>
+      <x-m> -1.264 </x-m>
+      <y-m> -0.141 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
