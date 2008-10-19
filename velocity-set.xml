@@ -1,18 +1,101 @@
 <?xml version="1.0"?>
 
-<!-- <PropertyList include="velocity-jsbsim-cnf.xml"> -->
-<PropertyList include="velocity-yasim-cnf.xml">
+<PropertyList>
 
-  <sim>
-    <description>Velocity XL</description>
-    <author>Emmanuel BARANGER (3D/FDM)</author>
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+    <description>Velocity XL (YASim)</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">velocity-yasim</aero>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Velocity-XL/velocity-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Velocity-XL/Sounds/velocity-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Velocity-XL/Models/velocity.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Velocity-XL</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <line>______________________________________________</line>
+    </help>
+
+    <menubar include="Dialogs/velocity-menu.xml"/>
+
+        <instrumentation>
+            <path>Aircraft/Velocity-XL/instrumentation.xml</path>
+        </instrumentation>
+
   </sim>
+
+  <controls>
+    <engines>
+      <engine>
+        <mixture archive="y"> 0.65 </mixture>
+      </engine>
+    </engines>
+    <electric>
+        <battery-switch>1</battery-switch>
+        <engine>
+            <generator>1</generator>
+        </engine>
+    </electric>
+    <lighting>
+        <instrument-lights>1</instrument-lights>
+    </lighting>
+  </controls> 
+
+    <instrumentation>
+        <comm>
+            <knob-25k type="bool">0</knob-25k>
+        </comm>
+        <nav>
+            <rad-btn type="bool">0</rad-btn>
+        </nav>
+    </instrumentation>
+
+  <input>
+    <keyboard include="Nasal/velocity-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <longez>
+      <file>Aircraft/Velocity-XL/Nasal/doors.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/light.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/velocity.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/liveries.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/KNS80.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/Electrical.nas</file>
+   </longez>
+  </nasal>
   
-   <!--<nasal>
-    <kap140>	   
-     <file>Aircraft/Generic/kap140.nas</file>
-    </kap140> 
-   </nasal>-->
-
 </PropertyList>
-

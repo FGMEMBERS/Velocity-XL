@@ -13,13 +13,22 @@
 
   <!-- ASI -->
   <model>
-    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/asi/asi-260-knot.xml</path>
     <offsets>
       <x-m> -1.265 </x-m>
       <y-m> -0.383 </y-m>
       <z-m>  0.133 </z-m>
     </offsets>
   </model>
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/asi/asi-260-knot.xml</path>
+	  <offsets>
+		  <x-m> -1.263 </x-m>
+		  <y-m> 0.383 </y-m>
+		  <z-m>  0.133 </z-m>
+	  </offsets>
+  </model> 
 
   <!-- AI -->
   <model>
@@ -29,6 +38,15 @@
       <y-m> -0.283 </y-m>
       <z-m>  0.133 </z-m>
     </offsets>
+  </model>
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+	  <offsets>
+		  <x-m> -1.263 </x-m>
+		  <y-m> 0.283 </y-m>
+		  <z-m>  0.133 </z-m>
+	  </offsets>
   </model>
 
   <!-- ALT -->
@@ -90,6 +108,88 @@
       <z-m>  0.033 </z-m>
     </offsets>
   </model>
+  
+
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/EGT-OAT/EGT-OAT.xml</path>
+	  <offsets>
+		  <x-m> -1.246 </x-m>
+		  <y-m> -0.281 </y-m>
+		  <z-m>  0.213 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/FuelGauge/FuelGauge.xml</path>
+	  <offsets>
+		  <x-m> -1.246 </x-m>
+		  <y-m> -0.211 </y-m>
+		  <z-m>  0.213 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/OilGauge/OilGauge.xml</path>
+	  <offsets>
+		  <x-m> -1.246 </x-m>
+		  <y-m> -0.351 </y-m>
+		  <z-m>  0.213 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/MPFuel/MPFuel.xml</path>
+	  <offsets>
+		  <x-m> -1.246 </x-m>
+		  <y-m> -0.131 </y-m>
+		  <z-m>  0.213 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kns80/kns80.xml</path>
+	  <offsets>
+		  <x-m> -1.245 </x-m>
+		  <y-m> 0.040 </y-m>
+		  <z-m>  0.050 </z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/KX165/KX165.xml</path>
+	  <offsets>
+		  <x-m>-1.245</x-m>
+		  <y-m>0.040</y-m>
+		  <z-m>0.1200</z-m>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>Gear Lever</name>
+	  <path>Aircraft/c182rg/Models/gear_control/cessna_gear_control.xml</path>
+	  <offsets>
+		  <x-m>-1.245</x-m>
+		  <y-m>-0.040</y-m>
+		  <z-m>-0.070</z-m>
+		  <pitch-deg>-6.5</pitch-deg>
+	  </offsets>
+  </model>
+  <instruments>  
+  <instrument include="Instruments/brakes.xml">
+	  <name>Brake Indicator Light</name>
+	  <x>279</x>
+	  <y>-200</y>
+  </instrument>
+</instruments>  
+  <!--<model>
+  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/brakes.xml</path>
+  <offsets>
+	  <x-m>-1.245</x-m>
+	  <y-m>-0.131</y-m>
+	  <z-m>0.213</z-m>
+  </offsets>
+</model>-->
 
   <!-- Toutes les visses -->
   <model>
