@@ -1550,7 +1550,6 @@ OBJECT poly
 name "vitre"
 data 5
 vitre
-texture "glass.png"
 texrep 1 1
 crease 30.000000
 numvert 290

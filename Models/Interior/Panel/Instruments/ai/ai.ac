@@ -4852,10 +4852,9 @@ refs 3
 127 0.765691101551 0.327242523432
 kids 0
 OBJECT poly
-name "vitre.001"
+name "vitre"
 data 4
-Mesh
-texture "glass.png"
+vitre
 texrep 1 1
 crease 30.000000
 numvert 211
