@@ -1920,7 +1920,7 @@ kids 0
 OBJECT poly
 name "vitre"
 data 9
-vitre.001
+vitre
 crease 30.000000
 numvert 290
 -0.002844 0 0
