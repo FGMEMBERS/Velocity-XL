@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -31,7 +31,7 @@
       <y-m> 0.0 </y-m>
       <z-m> 0.02 </z-m>
     </offsets>
-  </model> -->
+  </model>
 
 </PropertyList>
 
