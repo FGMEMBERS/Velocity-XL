@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!-- velocity : 2008 Emmanuel BARANGER 
                      John LICHTENBERGER 
 -->
 
-<airplane mass="1640" >
+<airplane mass="1700" >
 
   <approach speed="75" aoa="5" fuel="0.2" >
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
@@ -10,11 +12,11 @@
   </approach>
   
   <cruise speed="200" alt="8500" fuel="0.2" >
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>  <!-- Ground adjustment only -->
   </cruise>
   
-  <cockpit x="0.769" y="0.236" z="0.344" />
+  <cockpit x="0.769" y="0.236" z="0.404" />
 
   <fuselage ax="3.025" ay="0" az="0.012" bx="-2.612" by="0" bz="-0.033" width="1.177" taper="0.50" midpoint="0.50" />
   
@@ -27,7 +29,7 @@
         sweep="3"
         camber="0.0">
         <stall aoa="20" width="3" peak="1.5"/>
-        <flap1 start="0.061" end="0.617" lift="1.6" drag="1.2"/>
+        <flap1 start="0.061" end="0.617" lift="1.2" drag="1.2"/>
         <control-input control="FLAP1" split="true" axis="/controls/flight/aileron"/>
         <control-input control="FLAP1" split="true" axis="/controls/flight/aileron-trim"/>        
         <control-output control="FLAP1" prop="/surface-positions/left-aileron-pos-norm" side="left"/>
@@ -46,15 +48,15 @@
 	 camber="0.03" 
 	 incidence="1.0" 
 	 twist="-0.0">
-	  <stall aoa="16" width="6" peak="1.5" />
-	  <flap0 start="0.1" end="0.98" lift="1.8" drag="1.6"/>
+	  <stall aoa="16" width="6" peak="1.7" />
+	  <flap0 start="0.1" end="0.98" lift="1.2" drag="1.2"/>
 	  
 	  <control-input axis="/controls/flight/flaps" control="FLAP0"/>
 	  
 	  <control-speed control="FLAP0" transition-time="64.0"/>
 	  
 	  <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
-  </mstab> -->
+  </mstab>-->
   
   <hstab x="-2.379" y="0.440" z="0.524"
          chord="0.722" 
@@ -65,7 +67,7 @@
          sweep="3"
          camber="0.07">
          <stall aoa="16" width="3" peak="1.6" />
-         <flap0 start="0.055" end="0.946" lift="1.5" drag="1.2"/>       
+         <flap0 start="0.055" end="0.946" lift="1.4" drag="1.2"/>       
          <control-input control="FLAP0" axis="/controls/flight/elevator"/>
          <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/>      
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
@@ -78,9 +80,13 @@
          length="1.820">
          <stall aoa="14" width="3" peak="1.5" />
          <flap0  start="0" end="1"  lift="1.4" drag="1.2"/>
+	 <spoiler start="0" end="1" lift="1.0" drag="40.0"/>
+	 <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
+	 <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>
          <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
          <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
          <control-output prop="/surface-positions/rudder-pos-norm" control="FLAP0" min="1" max="-1"/>
+	 <control-speed control="SPOILER" transition-time="3"/>
   </vstab>
 
   <propeller x="2.380" y="0" z="0.012"
@@ -92,14 +98,14 @@
              cruise-speed="250" 
              cruise-rpm="2700"
              cruise-alt="8500" 
-             cruise-power="300"
-             takeoff-power="300" 
+             cruise-power="280"
+             takeoff-power="280" 
              takeoff-rpm="2700"
              gear-ratio="1.0"
              fine-stop="0.8"
-             coarse-stop="1.8">
+             coarse-stop="4">
              <piston-engine  eng-rpm="2700"  
-                             eng-power="300"
+                             eng-power="280"
                              displacement="541.5" 
                              compression="8.7"/>
              <actionpt x="2.830" y="0.0" z="0.012"/>
@@ -112,7 +118,7 @@
 
   <gear x="2.118" y="0" z="-1.269" 
         compression="0.15"
-	spring="0.4"
+	spring="0.2"
         retract-time="5">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.5" dst1="0.5"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -121,10 +127,8 @@
   </gear>
 
   <gear x="-0.899" y="0.893" z="-1.166" 
-        compression="0.1"
-	spring="0.4"
-	sfric="1.0"
-	dfric="0.9">
+        compression="0.5"
+	spring="2.2">
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
         <control-speed control="EXTEND" transition-time="7"/>
@@ -133,10 +137,8 @@
   </gear>
 
   <gear x="-0.899" y="-0.893" z="-1.166" 
-        compression="0.1"
-	spring="0.4"
-	sfric="1.0"
-	dfric="0.9">
+        compression="0.5"
+	spring="2.2">
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
         <control-speed control="EXTEND" transition-time="7"/>
@@ -145,8 +147,9 @@
   </gear>
 
   <!-- Fuel -->
-  <tank x="0.896" y="0" z="1.524" capacity="240"/>
-  <tank x="1.724" y="0" z="0" capacity="180"/>
+
+<tank x="1.000" y="0.900" z="0.330" capacity="240.8"/>
+<tank x="1.000" y="-0.900" z="0.330" capacity="240.8"/>
 
   <!-- CG Théorique x=0.171 y=0 z=0.330 -->
   <ballast x="-1.125" y="0.001" z="0.796" mass="150"/>

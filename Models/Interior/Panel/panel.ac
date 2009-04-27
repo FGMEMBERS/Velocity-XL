@@ -1,16 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "NoName.008" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 50 trans 0
-MATERIAL "InstrumentBezel.014" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
-MATERIAL "InstrumentBezel.007" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
-MATERIAL "InstrumentBezel.013" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
-MATERIAL "Noneai_face.rgb" rgb 0.8 0.8 0.8 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "InstrumentBezel.006" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
-MATERIAL "InstrumentBezel.001" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
-MATERIAL "BlackPaint.002" rgb 0 0 0 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "InstrumentBezel.009" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
-MATERIAL "InstrumentBezel.015" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
-MATERIAL "InstrumentBezel" rgb 0.042666 0.042666 0.042666 amb 0.5 0.5 0.5 emis 0 0 0 spec 0.123149 0.123149 0.123149 shi 32 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 OBJECT world
 kids 1
 OBJECT poly

@@ -38,7 +38,7 @@
   <animation>
     <type>select</type>
     <object-name>redgear</object-name>
-    <object-name>yellowgear</object-name>
+    <!--<object-name>yellowgear</object-name>-->
     <object-name>greengear</object-name>
     <condition>
       <and>

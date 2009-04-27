@@ -83,5 +83,23 @@ This file selects the instrumentation modules that should be available.
         <number>0</number>
         <static-pressure>/systems/static/pressure-inhg</static-pressure>
     </vertical-speed-indicator>
+    
+    <!--<gps>
+        <name>gps</name>
+        <number>0</number>
+    </gps>-->
+
+  <encoder>
+    <name>encoder</name>
+    <number>0</number>
+    <static-pressure>/systems/pressurization/pressure-inhg</static-pressure>
+  </encoder>
+
+    <!--<KAP140TwoAxisAlt>
+	    <name>KAP140TwoAxisAlt</name>
+	    <number>0</number>
+    </KAP140TwoAxisAlt>-->
+    
+    
 
 </PropertyList>

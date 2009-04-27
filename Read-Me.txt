@@ -14,11 +14,11 @@ Velocity XL
 Manufacturer                  Velocity Aircraft 
 Type                          Homebuild Canard/Pusher 
 Year                          : 
-Powerplant                    IO-40 
+Powerplant                    IO-540 
 Wingspan                      31 feet 
 Length                        20 feet 
 Height                        7 feet 9 inches 
-Empty weight                  1640 lbs 
+Empty weight                  1700 lbs 
 Cruise speed                  200 kts @ 8500ft. 
 Crew                          Seats 4  
 
@@ -52,7 +52,7 @@ Velocity XL
 Constructeur                  : Velocity Aircraft
 Type                          : 
 Année                         : 
-Moteur                        : IO-40
+Moteur                        : IO-540
 Envergure                     : 9.44 m
 Longueur                      : 6.09 m
 Hauteur                       : 2.20 m
