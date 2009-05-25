@@ -173,21 +173,21 @@
   </model>
   
   <!--<model>
-	  <path>Aircraft/Instruments-3d/zkv500/ZKV500.xml</path>
-	  <offsets>
-		  <x-m>  -1.245 </x-m>
-		  <y-m> -0.090 </y-m>
-		  <z-m> 0.133 </z-m>
-	  </offsets>
+    <path>Aircraft/Instruments-3d/zkv500/ZKV500.xml</path>
+    <offsets>
+      <x-m> -1.245 </x-m>
+      <y-m> -0.090 </y-m>
+      <z-m>  0.133 </z-m>
+    </offsets>
   </model>-->
   
   <model>
-	  <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kfc150/kfc150.xml</path>
-	  <offsets>
-		  <x-m> -1.245 </x-m>
-		  <y-m> 0.040 </y-m>
-		  <z-m> 0.240 </z-m>
-	  </offsets>
+    <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kfc150/kfc150.xml</path>
+    <offsets>
+      <x-m> -1.245 </x-m>
+      <y-m>  0.040 </y-m>
+      <z-m>  0.240 </z-m>
+    </offsets>
   </model>
 
   <model>
@@ -213,20 +213,20 @@
   -->
 
   <instruments>  
-  <instrument include="Instruments/brakes.xml">
-    <name>Brake Indicator Light</name>
-    <x>279</x>
-    <y>-200</y>
-  </instrument>
-</instruments>  
+    <instrument include="Instruments/brakes.xml">
+      <name>Brake Indicator Light</name>
+      <x>  279 </x>
+      <y> -200 </y>
+    </instrument>
+  </instruments>  
 
   <!--
   <model>
     <path>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/brakes.xml</path>
     <offsets>
-      <x-m>-1.245</x-m>
-      <y-m>-0.131</y-m>
-      <z-m>0.213</z-m>
+      <x-m> -1.245 </x-m>
+      <y-m> -0.131 </y-m>
+      <z-m>  0.213 </z-m>
     </offsets>
   </model>
   -->

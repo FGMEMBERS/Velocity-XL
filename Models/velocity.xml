@@ -3,9 +3,7 @@
 <PropertyList>
 
   <path>velocity.ac</path>
-  <offsets>
-	  <z-m>0.060</z-m>
-  </offsets>
+  
 
   <nasal>
     <load>

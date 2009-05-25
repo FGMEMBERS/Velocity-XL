@@ -106,13 +106,13 @@
     <velocity>
       <file>Aircraft/Velocity-XL/Nasal/doors.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/light.nas</file>
-      <file>Aircraft/Velocity-XL/Nasal/velocity.nas</file>
+      <!--<file>Aircraft/Velocity-XL/Nasal/velocity.nas</file>-->
       <file>Aircraft/Velocity-XL/Nasal/liveries.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/KNS80.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/Electrical.nas</file>
     </velocity>
     <systems>
-      <file>Aircraft/Velocity-XL/Nasal/kln90b.nas</file>
+      <file>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kln90b/kln90b.nas</file>
     </systems>
     <king>
       <file>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kfc150/kfc150.nas</file>

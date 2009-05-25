@@ -36,6 +36,7 @@
         <control-output control="FLAP1" prop="/surface-positions/right-aileron-pos-norm" side="right"/> 
   </wing>
   
+  
   <!-- forward wings (canards) 
   <mstab x="5.7" 
 	 y="0.5" 
@@ -62,16 +63,17 @@
          chord="0.722" 
          taper="0.68" 
          length="2.00"
-         dihedral="-5" 
-         incidence="0" 
-         sweep="3"
+         dihedral="-1" 
+         incidence="1.0" 
+         sweep="0"
          camber="0.07">
-         <stall aoa="16" width="3" peak="1.6" />
+         <stall aoa="16" width="3" peak="1.5" />
          <flap0 start="0.055" end="0.946" lift="1.4" drag="1.2"/>       
          <control-input control="FLAP0" axis="/controls/flight/elevator"/>
          <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/>      
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
   </hstab>
+  
 
   <vstab x="-2.311" y="0" z="0.011" 
          sweep="20" 
@@ -90,22 +92,22 @@
   </vstab>
 
   <propeller x="2.380" y="0" z="0.012"
-             radius="1.0"
-             mass="80" 
-             moment="13"
-	     min-rpm="1900"
-	     max-rpm="3000"
+             radius="0.991"
+             mass="65" 
+             moment="9.64"
+	     min-rpm="2454"
+	     max-rpm="2887"
              cruise-speed="250" 
              cruise-rpm="2700"
              cruise-alt="8500" 
              cruise-power="280"
              takeoff-power="280" 
              takeoff-rpm="2700"
-             gear-ratio="1.0"
+             gear-ratio=".94"
              fine-stop="0.8"
              coarse-stop="4">
              <piston-engine  eng-rpm="2700"  
-                             eng-power="280"
+                             eng-power="300"
                              displacement="541.5" 
                              compression="8.7"/>
              <actionpt x="2.830" y="0.0" z="0.012"/>
@@ -117,8 +119,8 @@
   </propeller>
 
   <gear x="2.118" y="0" z="-1.269" 
-        compression="0.15"
-	spring="0.2"
+        compression="0.1"
+	spring="0.8"
         retract-time="5">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.5" dst1="0.5"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -127,8 +129,8 @@
   </gear>
 
   <gear x="-0.899" y="0.893" z="-1.166" 
-        compression="0.5"
-	spring="2.2">
+        compression="0.1"
+	spring="0.8">
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
         <control-speed control="EXTEND" transition-time="7"/>
@@ -137,8 +139,8 @@
   </gear>
 
   <gear x="-0.899" y="-0.893" z="-1.166" 
-        compression="0.5"
-	spring="2.2">
+        compression="0.1"
+	spring="0.8">
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
         <control-speed control="EXTEND" transition-time="7"/>

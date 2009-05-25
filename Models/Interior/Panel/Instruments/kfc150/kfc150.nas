@@ -8,7 +8,7 @@ var KFC150 = {
         m.self_test_enabled=0;
         m.self_test_timer=0;
         m.AP={off:1,on:0};
-        m.LMlist=["wing-leveler","dg-heading-hold","nav1-hold"];
+        m.LMlist=["wing-leveler","dg-heading-hold","nav1-hold","gps-hold"];
         m.VMlist=["pitch-hold","altitude-hold","gs1-hold"];
 
         m.Lateral_mode=props.globals.getNode("autopilot/locks/heading",1);
@@ -51,7 +51,7 @@ var KFC150 = {
         if(Vn == "gs1-hold")me.APR_annun.setValue(1) else me.APR_annun.setValue(me.flasher);
         if(Vn == "altitude-hold")me.ALT_annun.setValue(1) else me.ALT_annun.setValue(me.flasher);
         if(Ln == "dg-heading-hold")me.HDG_annun.setValue(1) else me.HDG_annun.setValue(me.flasher);
-        if(Ln == "nav1-hold")me.NAV_annun.setValue(1) else me.NAV_annun.setValue(me.flasher);
+        if(Ln == "nav1-hold" or Ln=="gps-hold")me.NAV_annun.setValue(1) else me.NAV_annun.setValue(me.flasher);
         if(getprop("instrumentation/nav/back-course-btn"))me.BC_annun.setValue(1) else me.BC_annun.setValue(me.flasher);
         if(!me.AP_off.getValue())me.AP_annun.setValue(1) else me.AP_annun.setValue(me.flasher);;
         if(me.self_test_enabled !=0) me.self_test_loop();
@@ -84,11 +84,22 @@ var KFC150 = {
             fd=1-fd;
             me.FD_annun.setValue(fd);
         }elsif(md=="alt"){
-            if(Vn == me.VMlist[1])me.Vertical_mode.setValue(me.VMlist[0]) else me.Vertical_mode.setValue(me.VMlist[1]);
+            if(Vn == me.VMlist[1]){
+                me.Vertical_mode.setValue(me.VMlist[0]); 
+            }else {
+                me.Vertical_mode.setValue(me.VMlist[1]);
+                setprop("autopilot/settings/target-altitude-ft",getprop("position/altitude-ft"));
+            }
         }elsif(md=="hdg"){
             if(Ln == me.LMlist[1])me.Lateral_mode.setValue(me.LMlist[0]) else me.Lateral_mode.setValue(me.LMlist[1]);
         }elsif(md=="nav"){
-            if(Ln == me.LMlist[2])me.Lateral_mode.setValue(me.LMlist[0]) else me.Lateral_mode.setValue(me.LMlist[2]);
+            if(Ln == me.LMlist[0]){
+                me.Lateral_mode.setValue(me.LMlist[2]);
+            }elsif(Ln == me.LMlist[2]){
+                me.Lateral_mode.setValue(me.LMlist[3]);
+            }else{
+                me.Lateral_mode.setValue(me.LMlist[0]);
+            }
         }elsif(md=="apr"){
             if(Ln == me.LMlist[2])me.Lateral_mode.setValue(me.LMlist[0]) else me.Lateral_mode.setValue(me.LMlist[2]);
             if(Vn == me.VMlist[2])me.Vertical_mode.setValue(me.VMlist[0]) else me.Vertical_mode.setValue(me.VMlist[2]);

@@ -160,8 +160,8 @@ Syd Adams
       <property>/instrumentation/nav/radials/selected-deg</property>
       <center>
         <x-m>  0.000 </x-m>
-        <y-m> -0.037 </y-m>
-        <z-m> -0.037 </z-m>
+        <y-m> -0.031 </y-m>
+        <z-m> -0.031 </z-m>
       </center>
       <axis>
         <x> -1 </x>
@@ -172,74 +172,166 @@ Syd Adams
 
    <animation>
      <type>pick</type>
-     <object-name>KI206.crsdn</object-name>
-     <visible>0</visible>
+     <object-name>KI206.knob</object-name>
      <action>
        <button>0</button>
        <repeatable>true</repeatable>
+       <interval-sec>0.1</interval-sec>
        <binding>
-         <command>property-adjust</command>
-         <property>/instrumentation/nav/radials/selected-deg</property>
-         <step>-1</step>
-         <min>0</min>
-         <max>360</max>
-         <wrap>1</wrap>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
+       </binding>
+       <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>5</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
+       </binding>
+       <binding>
+            <condition>
+                <property>instrumentation/nav/slaved-to-gps</property>
+            </condition>
+            <command>property-assign</command>
+            <property>instrumentation/gps/tracking-bug</property>
+            <property>instrumentation/nav/radials/selected-deg</property>
        </binding>
      </action>
    </animation>
 
    <animation>
      <type>pick</type>
-     <object-name>KI206.crsdn</object-name>
-     <visible>0</visible>
+     <object-name>KI206.knob</object-name>
+     <action>
+       <button>3</button>
+       <binding>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
+       </binding>
+       <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>5</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
+       </binding>
+       <binding>
+            <condition>
+                <property>instrumentation/nav/slaved-to-gps</property>
+            </condition>
+            <command>property-assign</command>
+            <property>instrumentation/gps/tracking-bug</property>
+            <property>instrumentation/nav/radials/selected-deg</property>
+       </binding>
+     </action>
+   </animation>
+
+   <animation>
+     <type>pick</type>
+     <object-name>KI206.knob</object-name>
      <action>
        <button>1</button>
        <repeatable>true</repeatable>
+       <interval-sec>0.1</interval-sec>
        <binding>
-         <command>property-adjust</command>
-         <property>/instrumentation/nav/radials/selected-deg</property>
-         <step>-10</step>
-         <min>0</min>
-         <max>360</max>
-         <wrap>1</wrap>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
+       </binding>
+       <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>-5</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
+       </binding>
+       <binding>
+            <condition>
+                <property>instrumentation/nav/slaved-to-gps</property>
+            </condition>
+            <command>property-assign</command>
+            <property>instrumentation/gps/tracking-bug</property>
+            <property>instrumentation/nav/radials/selected-deg</property>
        </binding>
      </action>
    </animation>
 
    <animation>
      <type>pick</type>
-     <object-name>KI206.crsup</object-name>
-     <visible>0</visible>
+     <object-name>KI206.knob</object-name>
      <action>
-       <button>0</button>
-       <repeatable>true</repeatable>
+       <button>4</button>
        <binding>
-         <command>property-adjust</command>
-         <property>/instrumentation/nav/radials/selected-deg</property>
-         <step>1</step>
-         <min>0</min>
-         <max>360</max>
-         <wrap>1</wrap>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
        </binding>
-    </action>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>KI206.crsup</object-name>
-    <visible>0</visible>
-    <action>
-      <button>1</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>instrumentation/nav/radials/selected-deg</property>
-        <step>10</step>
-        <min>0</min>
-        <max>360</max>
-        <wrap>1</wrap>
-      </binding>
-    </action>
-  </animation>
+       <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/nav/radials/selected-deg</property>
+            <step>-5</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>1</wrap>
+       </binding>
+       <binding>
+            <condition>
+                <property>instrumentation/nav/slaved-to-gps</property>
+            </condition>
+            <command>property-assign</command>
+            <property>instrumentation/gps/tracking-bug</property>
+            <property>instrumentation/nav/radials/selected-deg</property>
+       </binding>
+     </action>
+   </animation>
 
 </PropertyList>
