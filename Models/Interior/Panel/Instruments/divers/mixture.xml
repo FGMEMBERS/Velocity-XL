@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>mixture.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>anneau</object-name>
+    <object-name>mixture</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>mixture</object-name>
+    <property>controls/engines/engine/mixture</property>
+    <factor>-0.077</factor>  
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.06 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.00 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

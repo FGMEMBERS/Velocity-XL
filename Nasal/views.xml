@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
 <PropertyList>
 
@@ -15,7 +15,7 @@
       <y-offset-m archive="y">  0.337 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -0.909 </z-offset-m>	<!-- Back  -->
       <pitch-offset-deg>-5</pitch-offset-deg>
-      <default-field-of-view-deg>80</default-field-of-view-deg>
+      <default-field-of-view-deg>88</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -39,11 +39,11 @@
   <view n="0">
     <internal archive="y">true</internal>
     <config>
-      <x-offset-m archive="y"> -0.329 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">  0.337 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -0.909 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg>-10</pitch-offset-deg>
-      <default-field-of-view-deg>80</default-field-of-view-deg>
+      <x-offset-m archive="y"> -0.25452083 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">  0.4153333</y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -0.714 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg>-4.3</pitch-offset-deg>
+      <default-field-of-view-deg>88</default-field-of-view-deg>
     </config>
   </view>
 

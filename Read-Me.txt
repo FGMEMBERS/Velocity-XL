@@ -1,4 +1,4 @@
-English/Français
+English/FranÃ§ais
 
 [English]
 ----------
@@ -6,11 +6,7 @@ English/Français
 A little history
 ================
 
-The Velocity XL is the eXtra Large version of the canard pusher aircraft from Velocity Aircraft. 
-Available in 4 seat or 5 seat (the -5 version) configurations, this aircraft offers spacious, 
-high performance long distance stylish cruising. Powered by either a 260 hp (194 kW) or 300 hp (220 kW) 
-Lycoming IO-540 engine, the XL offers a cruising range of 875 nautical miles (1,621 km/1,007 mi) and 
-a 75% power cruising speed of 185 knots (213 mph/343 km/h) air speed.
+The Velocity XL is the eXtra Large version of the canard pusher aircraft from Velocity Aircraft. Available in 4 seat or 5 seat (the -5 version) configurations, this aircraft offers spacious, high performance long distance stylish cruising. Powered by either a 260 hp (194 kW) or 300 hp (220 kW) Lycoming IO-540 engine, the XL offers a cruising range of 875 nautical miles (1,621 km/1,007 mi) and a 75% power cruising speed of 185 knots (213 mph/343 km/h) air speed.
 
 Velocity XL
 ===========
@@ -34,7 +30,6 @@ Thanks
 
 John LICHTENBERGER for the FDM
 Brian GLADDEN whose model freeware serve as a reference model
-Viper for instruments and avionics
 
 ===============
 BARANGER Emmanuel
@@ -49,25 +44,21 @@ embaranger@free.fr
 
 Un peu d'histoire
 =================
-Le Velocity XL est une version extra large de l'avion canard de Velocity Aircraft.
-Disponible en 4 ou 5 places (la version -5), cet appareil propose une cabine spacieuse 
-et des vols longue distance hautes performances. Propulsé par un Lycoming IO-540 de, soit 260 ch (194 kW) 
-ou 300 ch (220 kw), le XL dispose d'un autonomie de 1621 km (875 miles marins/1007 mi) 
-et à 75% de puissance, une vitesse de croisière de 343 km/h (213 mph/185 neuds).
+Le Velocity XL est une version extra large de l'avion canard de Velocity Aircraft.Disponible en 4 ou 5 places (le version -5), cet appareil propose une cabine spacieuse et des vols longue distance hautes performances. PropulsÃ© par un Lycoming IO-540 de,soit 260 ch (194 kW) ou 300 ch (220 kw), le XL dispose d'un autonomie de 1621 km (875 miles marins/1007 mi) et Ã  75% de puissance, une vitesse de croisÃ¨re de 343 km/h (213 mph/185 neuds).
 
 Velocity XL
 ===========
 
 Constructeur                  : Velocity Aircraft
 Type                          : 
-Année                         : 
+AnnÃ©e                         : 
 Moteur                        : IO-540
 Envergure                     : 9.44 m
 Longueur                      : 6.09 m
 Hauteur                       : 2.20 m
-Poids à vide                  : 744 kg
-Vitesse de croisière          : 370 km/h à 8500 pieds (2590 m)
-Equipage                      : 4 sièges
+Poids Ã  vide                  : 744 kg
+Vitesse de croisiÃ¨re          : 370 km/h Ã  8500 pieds (2590 m)
+Equipage                      : 4 siÃ¨ges
 
 
 Quelques touches utiles :
@@ -77,8 +68,7 @@ Remerciements
 =============
 
 John LICHTENBERGER pour le FDM
-Brian GLADDEN dont le modèle Freeware a servi de référence
-Viper pour les instruments et l'avionique
+Brian GLADDEN dont le modÃ¨le Freeware a servi de rÃ©fÃ©rence
 
 ===============
 BARANGER Emmanuel

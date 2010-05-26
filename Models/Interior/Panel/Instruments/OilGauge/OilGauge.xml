@@ -64,12 +64,12 @@
   <animation> 
     <type>rotate</type>
     <object-name>PtrR</object-name>
-    <property>engines/engine/rpm</property>
+    <property>engines/engine/oil-pressure-psi</property>
     <interpolation>
       <entry><ind>   0 </ind><dep>  0.0 </dep></entry>
       <entry><ind>  30 </ind><dep> 29.0 </dep></entry>
       <entry><ind>  90 </ind><dep> 70.0 </dep></entry>
-     <!-- <entry><ind> 120 </ind><dep> 84.5 </dep></entry>-->
+      <entry><ind> 120 </ind><dep> 84.5 </dep></entry>
     </interpolation>
     <axis> 
       <x> -1 </x>

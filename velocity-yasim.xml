@@ -1,159 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- velocity : 2008 Emmanuel BARANGER 
-                     John LICHTENBERGER 
+<!--
+Alternative Velocity XL FDM
+Gary R. Neely "Buckaroo"
 -->
 
-<airplane mass="1700" >
+<airplane mass="1650" >
 
-  <approach speed="75" aoa="5" fuel="0.2" >
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>  <!-- Ground adjustment only -->
-  </approach>
-  
-  <cruise speed="200" alt="8500" fuel="0.2" >
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>  <!-- Ground adjustment only -->
-  </cruise>
-  
-  <cockpit x="0.769" y="0.236" z="0.404" />
+<!--
+Mostly guesswork, with a little research.
+75% throttle is max cruise, but the POH recommends 60% for best fuel and noise results.
+Cruise mixture is a guess, needs experimentation, leaning just rich of peak. Some Velocity
+packages have an engine control setting that adjusts mixture automatically.
+Best glide ratio is said to be 12:1, the model currently gives a conservative L/D of ~11:1.
+-->
 
-  <fuselage ax="3.025" ay="0" az="0.012" bx="-2.612" by="0" bz="-0.033" width="1.177" taper="0.50" midpoint="0.50" />
-  
-  <wing x="0.171" y="0.440" z="0.330"  
-        chord="0.722" 
-        taper="0.68" 
-        length="2.00"
-        dihedral="5" 
-        incidence="0" 
-        sweep="3"
-        camber="0.0">
-        <stall aoa="20" width="3" peak="1.5"/>
-        <flap1 start="0.061" end="0.617" lift="1.2" drag="1.2"/>
-        <control-input control="FLAP1" split="true" axis="/controls/flight/aileron"/>
-        <control-input control="FLAP1" split="true" axis="/controls/flight/aileron-trim"/>        
-        <control-output control="FLAP1" prop="/surface-positions/left-aileron-pos-norm" side="left"/>
-        <control-output control="FLAP1" prop="/surface-positions/right-aileron-pos-norm" side="right"/> 
-  </wing>
-  
-  
-  <!-- forward wings (canards) 
-  <mstab x="5.7" 
-	 y="0.5" 
-	 z="-1.1" 
-	 length="1.0" 
-	 chord="0.7"
-	 sweep="3.0" 
-	 dihedral="-3" 
-	 taper="0.8"  
-	 camber="0.03" 
-	 incidence="1.0" 
-	 twist="-0.0">
-	  <stall aoa="16" width="6" peak="1.7" />
-	  <flap0 start="0.1" end="0.98" lift="1.2" drag="1.2"/>
-	  
-	  <control-input axis="/controls/flight/flaps" control="FLAP0"/>
-	  
-	  <control-speed control="FLAP0" transition-time="64.0"/>
-	  
-	  <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
-  </mstab>-->
-  
-  <hstab x="-2.379" y="0.440" z="0.524"
-         chord="0.722" 
-         taper="0.68" 
-         length="2.00"
-         dihedral="-1" 
-         incidence="1.0" 
-         sweep="0"
-         camber="0.07">
-         <stall aoa="16" width="3" peak="1.5" />
-         <flap0 start="0.055" end="0.946" lift="1.4" drag="1.2"/>       
-         <control-input control="FLAP0" axis="/controls/flight/elevator"/>
-         <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/>      
-         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
-  </hstab>
-  
+<approach speed="75" aoa="4" fuel="0.2" >
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+  <control-setting axis="/controls/gear/gear-down" value="1"/>
+  <solve-weight idx="0" weight="180"/>
+  <solve-weight idx="1" weight="0"/>
+</approach>
 
-  <vstab x="-2.311" y="0" z="0.011" 
-         sweep="20" 
-         chord="0.574" 
-         taper="0.53" 
-         length="1.820">
-         <stall aoa="14" width="3" peak="1.5" />
-         <flap0  start="0" end="1"  lift="1.4" drag="1.2"/>
-	 <spoiler start="0" end="1" lift="1.0" drag="40.0"/>
-	 <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
-	 <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>
-         <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
-         <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
-         <control-output prop="/surface-positions/rudder-pos-norm" control="FLAP0" min="1" max="-1"/>
-	 <control-speed control="SPOILER" transition-time="3"/>
-  </vstab>
+<cruise speed="178" alt="8000" fuel="0.7" >
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.65"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="0.8"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
+  <control-setting axis="/controls/gear/gear-down" value="0"/>
+  <solve-weight idx="0" weight="180"/>
+  <solve-weight idx="1" weight="0"/>
+</cruise>
 
-  <propeller x="2.380" y="0" z="0.012"
-             radius="0.991"
-             mass="65" 
-             moment="9.64"
-	     min-rpm="2454"
-	     max-rpm="2887"
-             cruise-speed="250" 
-             cruise-rpm="2700"
-             cruise-alt="8500" 
-             cruise-power="280"
-             takeoff-power="280" 
-             takeoff-rpm="2700"
-             gear-ratio=".94"
-             fine-stop="0.8"
-             coarse-stop="4">
-             <piston-engine  eng-rpm="2700"  
-                             eng-power="300"
-                             displacement="541.5" 
-                             compression="8.7"/>
-             <actionpt x="2.830" y="0.0" z="0.012"/>
-             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
-             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
-             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
-             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
-             <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
-  </propeller>
 
-  <gear x="2.118" y="0" z="-1.269" 
-        compression="0.1"
-	spring="0.8"
-        retract-time="5">
-        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.5" dst1="0.5"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
-        <control-speed control="EXTEND" transition-time="7"/>
-  </gear>
+<!-- Cockpit position: -->
 
-  <gear x="-0.899" y="0.893" z="-1.166" 
-        compression="0.1"
-	spring="0.8">
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
-        <control-speed control="EXTEND" transition-time="7"/>
-        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
-  </gear>
+<cockpit x="0.77" y="-0.236" z="0.404" />
 
-  <gear x="-0.899" y="-0.893" z="-1.166" 
-        compression="0.1"
-	spring="0.8">
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
-        <control-speed control="EXTEND" transition-time="7"/>
-        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
-  </gear>
 
-  <!-- Fuel -->
+<fuselage ax="3.017" ay="0" az="-0.126" bx="-2.110" by="0" bz="0.140" width="1.270" taper="0.25" midpoint="0.5" />
 
-<tank x="1.000" y="0.900" z="0.330" capacity="240.8"/>
-<tank x="1.000" y="-0.900" z="0.330" capacity="240.8"/>
 
-  <!-- CG Théorique x=0.171 y=0 z=0.330 -->
-  <ballast x="-1.125" y="0.001" z="0.796" mass="150"/>
+<!--
+Aileron trailing edges are up to 1/4" below wing trailing edge at neutral.
+Travel is 2.5" at inboard trailing edge.
+Dihedral unknown, but slight based on photos and drawings.
+-->
+
+<wing x="-0.664" y="0.500" z="-0.100"  
+    chord="2.125" 
+    taper="0.33" 
+    length="4.456"
+    dihedral="2" 
+    incidence="0" 
+    sweep="22.5"
+    camber="0.025">
+  <stall aoa="18" width="8" peak="1.5"/>
+  <flap0 start="0.505" end="0.834" lift="1.15" drag="1.2"/>
+  <control-input control="FLAP0" split="true" axis="/controls/flight/aileron"/>
+  <control-input control="FLAP0" split="true" axis="/controls/flight/aileron-trim"/>     
+  <control-output control="FLAP0" prop="/surface-positions/left-aileron-pos-norm" side="left"/>
+  <control-output control="FLAP0" prop="/surface-positions/right-aileron-pos-norm" side="right"/> 
+</wing>
+
+<!--
+Canard travel is 26 deg down, 23 deg up.
+Dihedral unknown. Photos and drawings suggest a slight negative value.
+-->
+
+<hstab x="1.957" y="0.550" z="0.018"
+    chord="0.473" 
+    taper="1" 
+    length="1.672"
+    dihedral="0" 
+    incidence="-2" 
+    sweep="0"
+    camber="0.1">
+  <stall aoa="15" width="4" peak="1.5" />
+  <flap0 start="0" end="1" lift="1.28" drag="1.5"/>       
+  <control-input control="FLAP0" axis="/controls/flight/elevator" invert="true"/>
+  <control-input control="FLAP0" axis="/controls/flight/elevator-trim" invert="true"/>      
+  <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+</hstab>
+
+
+<!--
+Twin vertical stabs have one-way rudders; travel is outboard up to 1.75" at trailing edge.
+Both rudders can be employed to make a weak speedbrake. See rudders.nas for how this is
+implemented. Note that an optional bellyflap is used on some builds for a more effective speedbrake.
+-->
+
+<vstab x="-2.346" y="-4.645" z="0.076" 
+    sweep="21" 
+    chord="0.730" 
+    taper="0.545" 
+    length="1.311">
+    <stall aoa="14" width="3" peak="1.5" />
+    <flap0 start="0" end="1"  lift="1.25" drag="1.3"/>
+  <control-input  control="FLAP0" axis="/controls/flight/rudder-left" invert="true"/>
+  <control-input  control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
+  <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm-left" min="1" max="-1"/>
+</vstab>
+
+<vstab x="-2.346" y="4.645" z="0.076" 
+    sweep="21" 
+    chord="0.730" 
+    taper="0.545" 
+    length="1.311">
+    <stall aoa="14" width="3" peak="1.5" />
+    <flap0 start="0" end="1"  lift="1.25" drag="1.3"/>
+  <control-input  control="FLAP0" axis="/controls/flight/rudder-right" invert="true"/>
+  <control-input  control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
+  <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm-right" min="1" max="-1"/>
+</vstab>
+
+
+<!--
+Engine/prop as original FDM except for location and action point.
+Action point is a guess at thrust bearing location.
+-->
+
+<propeller x="-2.220" y="0" z="0.014"
+     radius="0.991"
+     mass="65" 
+     moment="9.64"
+     min-rpm="2454"
+     max-rpm="2887"
+     cruise-speed="250" 
+     cruise-rpm="2700"
+     cruise-alt="8500" 
+     cruise-power="280"
+     takeoff-power="280" 
+     takeoff-rpm="2700"
+     gear-ratio=".94"
+     fine-stop="0.8"
+     coarse-stop="4">
+     <piston-engine
+       eng-rpm="2700"  
+       eng-power="300"
+       displacement="541.5" 
+       compression="8.7"/>
+     <actionpt x="-2" y="0" z="0.014"/>
+     <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+     <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+     <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+     <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
+     <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
+</propeller>
+
+
+<!-- Slight changes to gear locations: -->
+
+<gear x="2.150" y="0" z="-1.255" 
+    compression="0.1"
+    spring="0.8">
+  <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.5" dst1="0.5"/>
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  <control-speed control="EXTEND" transition-time="7"/>
+</gear>
+
+<gear x="-0.9" y="0.9" z="-1.2" 
+    compression="0.1"
+    spring="0.8">
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  <control-speed control="EXTEND" transition-time="7"/>
+</gear>
+
+<gear x="-0.9" y="-0.9" z="-1.2" 
+    compression="0.1"
+    spring="0.8">
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+  <control-speed control="EXTEND" transition-time="7"/>
+</gear>
+
+
+<!--
+Based on two 33 gallon tanks in approximately mid-wing strake locations 
+and one 4 gallon feed sump located behind rear seat. This needs some nasal work
+to make the main tanks feed the sump which then feeds the engine. Currently all
+tanks feed evenly by the default fuel system, so the sump tank will run dry
+quickly, though that's not a problem. Change the order of these if your fuel
+gauges report wrong.
+Note that positions may be more outboard than shown here, as inboard strakes
+are baggage compartments.
+-->
+
+<tank x="-1.000" y="0.000" z="-0.1" capacity="24"/>
+<tank x="-1.000" y="0.900" z="-0.1" capacity="198"/>
+<tank x="-1.000" y="-0.900" z="-0.1" capacity="198"/>
+
+
+<ballast x="0.77" y="0" z="0" mass="325"/>
+
+
+<!--
+Weight options: 
+  forward seats
+  rear seat or baggage 
+-->
+
+<weight x="0.77"  y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
+<weight x="-1"    y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
+
 
 </airplane>

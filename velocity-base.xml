@@ -52,14 +52,25 @@
       <electrical>
         <path></path>
       </electrical>
-      <autopilot>
-        <path>Aircraft/Velocity-XL/Nasal/autopilot.xml</path>
-      </autopilot>
     </systems>
 
     <instrumentation>
       <path>Aircraft/Velocity-XL/Nasal/instrumentation.xml</path>
     </instrumentation>
+
+    <weight n="0">
+      <name>Front Seats</name>
+      <weight-lb>180</weight-lb> 
+      <max-lb>360</max-lb>
+      <min-lb>180</min-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Rear Seats/Cargo</name>
+      <weight-lb>0</weight-lb> 
+      <max-lb>420</max-lb>
+      <min-lb>0</min-lb>      
+    </weight>
 
   </sim>
 
@@ -78,6 +89,10 @@
     <lighting>
       <instrument-lights>1</instrument-lights>
     </lighting>
+    <flight>
+      <rudder-left type="float">0</rudder-left>
+      <rudder-right type="float">0</rudder-right>
+    </flight>
   </controls> 
 
   <instrumentation>
@@ -87,35 +102,35 @@
     <nav>
       <rad-btn type="bool">0</rad-btn>
     </nav>
+    <radar>
+      <range type="int">40</range>
+    </radar>
     <encoder>
         <serviceable type="bool">1</serviceable>
     </encoder>
   </instrumentation>
-  <autopilot>
-    <locks>
-        <passive-mode type="bool">1</passive-mode>
-    </locks>
-  </autopilot>
-
 
   <input>
     <keyboard include="Nasal/velocity-keyboard.xml"/>
   </input>
- 
+
   <nasal>
     <velocity>
       <file>Aircraft/Velocity-XL/Nasal/doors.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/light.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/velocity.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/liveries.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/KNS80.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/Electrical.nas</file>
-      <file>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kns80/kns80.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/rudders.nas</file>
     </velocity>
     <systems>
-      <file>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kln90b/kln90b.nas</file>
+      <file>Aircraft/Velocity-XL/Nasal/kln90b.nas</file>
     </systems>
     <king>
       <file>Aircraft/Velocity-XL/Models/Interior/Panel/Instruments/kfc150/kfc150.nas</file>
     </king>
   </nasal>
-  
+
 </PropertyList>
+

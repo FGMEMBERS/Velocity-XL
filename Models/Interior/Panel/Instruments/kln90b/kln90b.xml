@@ -7,6 +7,8 @@ Syd Adams
 
     <path>kln90b.ac</path>
 
+<!--    OSG hotspots  -->
+
     <panel>
         <name>GPS screen</name>
         <path>Aircraft/b1900d/Models/Instruments/KLN90B/gps.xml</path>
@@ -27,12 +29,9 @@ Syd Adams
         </top-left>
     </panel>
 
-<!--  hotspots  -->
-<!-- LH knob -->
-
     <animation>
         <type>pick</type>
-        <object-name>KLN90B.lhknob</object-name>
+        <object-name>LH.dn</object-name>
         <action>
             <button>1</button>
             <repeatable>false</repeatable>
@@ -45,48 +44,22 @@ Syd Adams
 
     <animation>
         <type>pick</type>
-        <object-name>KLN90B.lhknob</object-name>
-        <action>
-            <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.lh_menu(1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.lhknob</object-name>
-        <action>
-            <button>4</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.lh_menu(-1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.lhknob</object-name>
-        <action>
-            <button>3</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.lh_menu(1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.lhknob1</object-name>
+        <object-name>LH.up</object-name>
         <action>
             <button>1</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>systems.Gps.lh_menu(1)</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>LH.dn</object-name>
+        <action>
+            <button>0</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
@@ -97,7 +70,7 @@ Syd Adams
 
     <animation>
         <type>pick</type>
-        <object-name>KLN90B.lhknob1</object-name>
+        <object-name>LH.up</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
@@ -110,89 +83,9 @@ Syd Adams
 
     <animation>
         <type>pick</type>
-        <object-name>KLN90B.lhknob1</object-name>
-        <action>
-            <button>4</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.lh_page(-1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.lhknob1</object-name>
-        <action>
-            <button>3</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.lh_page(1)</script>
-            </binding>
-        </action>
-    </animation>
-
-<!-- RH knob -->
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.rhknob</object-name>
-        <action>
-            <button>1</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.rh_menu(-1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.rhknob</object-name>
+        <object-name>RH.dn</object-name>
         <action>
             <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.rh_menu(1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.rhknob</object-name>
-        <action>
-            <button>4</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.rh_menu(-1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.rhknob</object-name>
-        <action>
-            <button>3</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>systems.Gps.rh_menu(1)</script>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>KLN90B.rhknob1</object-name>
-        <action>
-            <button>1</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
@@ -203,7 +96,7 @@ Syd Adams
 
     <animation>
         <type>pick</type>
-        <object-name>KLN90B.rhknob1</object-name>
+        <object-name>RH.up</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
@@ -216,31 +109,29 @@ Syd Adams
 
     <animation>
         <type>pick</type>
-        <object-name>KLN90B.rhknob1</object-name>
+        <object-name>RH.dn</object-name>
         <action>
-            <button>4</button>
+            <button>1</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>systems.Gps.rh_page(-1)</script>
+                <script>systems.Gps.rh_menu(-1)</script>
             </binding>
         </action>
     </animation>
 
     <animation>
         <type>pick</type>
-        <object-name>KLN90B.rhknob1</object-name>
+        <object-name>RH.up</object-name>
         <action>
-            <button>3</button>
+            <button>1</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>systems.Gps.rh_page(1)</script>
+                <script>systems.Gps.rh_menu(1)</script>
             </binding>
         </action>
     </animation>
-
-<!-- Buttons -->
 
     <animation>
         <type>pick</type>
@@ -249,8 +140,8 @@ Syd Adams
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
-                 <command>property-toggle</command>
-         <property>instrumentation/gps/serviceable</property>
+                 <command>nasal</command>
+         <script>systems.Gps.power_up();</script>
             </binding>
         </action>
     </animation>

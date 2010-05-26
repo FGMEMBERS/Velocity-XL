@@ -3,7 +3,6 @@
 <PropertyList>
 
   <path>velocity.ac</path>
-  
 
   <nasal>
     <load>
@@ -49,26 +48,6 @@
   </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>vitres</object-name>
-    <object-name>lampe</object-name>
-    <object-name>lampeG</object-name>
-    <object-name>lampeD</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
-    <object-name>vitres</object-name>
-    <object-name>lampe</object-name>
-    <object-name>lampeG</object-name>
-    <object-name>lampeD</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>ailes2</object-name>
@@ -95,7 +74,7 @@
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>texture.rgb</texture>
+    <texture>texture.png</texture>
 <!--
     <diffuse>
       <red-prop>diffuse/red</red-prop>
@@ -125,6 +104,44 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Velocity-XL/Models/Effects/Velocityreflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>bol</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>directionG</object-name>
+    <object-name>directionD</object-name>
+    <object-name>derives</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>axeG</object-name>
+    <object-name>axeD</object-name>
+  </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+    <object-name>lampe</object-name>
+    <object-name>lampeG</object-name>
+    <object-name>lampeD</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>vitres</object-name>
+    <object-name>lampe</object-name>
+    <object-name>lampeG</object-name>
+    <object-name>lampeD</object-name>
   </animation>
 
   <!-- Interieur -->
@@ -224,11 +241,11 @@
   </animation>
 
   <!-- Gouverne de direction -->
-  <animation>
+    <animation>
     <type>rotate</type>
     <object-name>directionG</object-name>
-    <property>/controls/flight/rudder</property>
-    <factor>30</factor>
+    <property>/surface-positions/rudder-pos-norm-left</property>
+    <factor>20</factor>
     <axis>
       <x1-m>  2.594 </x1-m>
       <y1-m> -4.646 </y1-m>
@@ -242,8 +259,8 @@
   <animation>
     <type>rotate</type>
     <object-name>directionD</object-name>
-    <property>/controls/flight/rudder</property>
-    <factor>30</factor>
+    <property>/surface-positions/rudder-pos-norm-right</property>
+    <factor>20</factor>
     <axis>
       <x1-m> 2.594 </x1-m>
       <y1-m> 4.646 </y1-m>
@@ -477,8 +494,9 @@
     </axis>
   </animation>
 
-  <!-- Essais d'ajout des effets lumineux -->
+  <!-- Effets lumineux -->
   <model>
+    <name>Beacon</name>
     <path>Aircraft/Velocity-XL/Models/lights/beacon.xml</path>
     <offsets>
       <x-m> 0.433 </x-m>
@@ -488,6 +506,7 @@
   </model>
 
   <model>
+    <name>Red</name>
     <path>Aircraft/Velocity-XL/Models/lights/RedLight.xml</path>
     <offsets>
       <x-m>  2.155 </x-m>
@@ -497,6 +516,7 @@
   </model>
 
   <model>
+    <name>Green</name>
     <path>Aircraft/Velocity-XL/Models/lights/GreenLight.xml</path>
     <offsets>
       <x-m>  2.155 </x-m>
@@ -505,7 +525,26 @@
     </offsets>
   </model>
 
+  <animation>
+    <name>AllNavLight</name>
+    <object-name>Beacon</object-name>
+    <object-name>Red</object-name>
+    <object-name>Green</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>AllNavLight</object-name>
+    <condition>
+      <equals>
+        <property>controls/switches/nav-lights</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
   <model>
+    <name>White2</name>
     <path>Aircraft/Velocity-XL/Models/lights/WhiteLight.xml</path>
     <offsets>
       <x-m>  1.006 </x-m>
@@ -515,6 +554,7 @@
   </model>
 
   <model>
+    <name>White1</name>
     <path>Aircraft/Velocity-XL/Models/lights/WhiteLight.xml</path>
     <offsets>
       <x-m>  1.006 </x-m>
@@ -524,6 +564,7 @@
   </model>
 
   <model>
+    <name>LeftWhite</name>
     <path>Aircraft/Velocity-XL/Models/lights/StrobeWhite.xml</path>
     <offsets>
       <x-m>  2.100 </x-m>
@@ -533,6 +574,7 @@
   </model>
 
   <model>
+    <name>RightWhite</name>
     <path>Aircraft/Velocity-XL/Models/lights/StrobeWhite.xml</path>
     <offsets>
       <x-m>  2.100 </x-m>
@@ -540,6 +582,76 @@
       <z-m> -0.069 </z-m>
     </offsets>
   </model>
+
+  <animation>
+    <name>AllStrobeLight</name>
+    <object-name>LeftWhite</object-name>
+    <object-name>RightWhite</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>AllStrobeLight</object-name>
+    <condition>
+      <equals>
+        <property>controls/switches/strobe-lights</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>White1</object-name>
+    <object-name>White2</object-name>
+    <condition>
+      <equals>
+        <property>controls/switches/lights</property>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <model>
+    <name>Landing-Light-L</name>
+    <path>Aircraft/Velocity-XL/Models/lights/light-cone.xml</path>
+    <offsets>
+      <x-m>          0.924 </x-m>
+      <y-m>         -2.325 </y-m>
+      <z-m>         -0.057 </z-m>
+      <pitch-deg>   -4.500 </pitch-deg>
+      <heading-deg> 13.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Landing-Light-R</name>
+    <path>Aircraft/Velocity-XL/Models/lights/light-cone.xml</path>
+    <offsets>
+      <x-m>           0.924 </x-m>
+      <y-m>           2.325 </y-m>
+      <z-m>          -0.057 </z-m>
+      <pitch-deg>    -4.500 </pitch-deg>
+      <heading-deg> -13.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>AllWingLight</name>
+    <object-name>Landing-Light-L</object-name>
+    <object-name>Landing-Light-R</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>AllWingLight</object-name>
+    <condition>
+      <equals>
+        <property>controls/switches/landing-light</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
 
 </PropertyList>
 
