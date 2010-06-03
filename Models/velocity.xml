@@ -107,7 +107,7 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/Velocity-XL/Models/Effects/Velocityreflect</inherits-from>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>ailes2</object-name>
     <object-name>profondeur</object-name>
