@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Velocity-XL/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -18,23 +32,24 @@
     <object-name>fuselage</object-name>
     <object-name>ailes2</object-name>
     <object-name>profondeur</object-name>
-    <object-name>helice</object-name>
     <object-name>bol</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>directionG</object-name>
     <object-name>directionD</object-name>
+    <object-name>derives</object-name>
+    <object-name>phares</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+
+    <object-name>helice</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
     <object-name>roueA</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
     <object-name>axeA</object-name>
-    <object-name>derives</object-name>
-    <object-name>phares</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>porteAD</object-name>
     <object-name>trous</object-name>
     <object-name>echappes</object-name>
 
@@ -52,23 +67,24 @@
     <object-name>fuselage</object-name>
     <object-name>ailes2</object-name>
     <object-name>profondeur</object-name>
-    <object-name>helice</object-name>
     <object-name>bol</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>directionG</object-name>
     <object-name>directionD</object-name>
+    <object-name>derives</object-name>
+    <object-name>phares</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+
+    <object-name>helice</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
     <object-name>roueA</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
     <object-name>axeA</object-name>
-    <object-name>derives</object-name>
-    <object-name>phares</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>porteAD</object-name>
     <object-name>trous</object-name>
     <object-name>echappes</object-name>
 
@@ -118,10 +134,9 @@
     <object-name>directionG</object-name>
     <object-name>directionD</object-name>
     <object-name>derives</object-name>
+    <object-name>phares</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-    <object-name>axeG</object-name>
-    <object-name>axeD</object-name>
   </effect>
 
   <animation>
@@ -144,6 +159,63 @@
     <object-name>lampeD</object-name>
   </animation>
 
+  <!-- Cranking effects -->
+  <!-- Left -->
+  <model>
+    <path>Aircraft/D510/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  1.594 </x-m>
+      <y-m> -0.279 </y-m>
+      <z-m> -0.254 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  45 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/D510/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m>  1.594 </x-m>
+      <y-m>  0.279 </y-m>
+      <z-m> -0.254 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  45 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Effets sur le sol -->
+  <!-- Roue avant -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -2.150 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.255 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m>  0.900 </x-m>
+      <y-m> -0.900 </y-m>
+      <z-m> -1.200 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue de droite -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Effects/ground/ground2.xml</path>   
+    <offsets>
+      <x-m>  0.900 </x-m>
+      <y-m>  0.900 </y-m>
+      <z-m> -1.200 </z-m>
+    </offsets>
+  </model>
+
   <!-- Interieur -->
   <model>
     <path>Aircraft/Velocity-XL/Models/Interior/interior.xml</path>
@@ -162,17 +234,6 @@
     <name>shadowOSG</name>
     <path>Aircraft/Velocity-XL/Models/shadow.xml</path>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>/sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
 
   <!-- L'hélice --> 
   <animation>

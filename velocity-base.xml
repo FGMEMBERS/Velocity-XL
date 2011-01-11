@@ -27,13 +27,17 @@
 
     <multiplay>
       <chat_display>1</chat_display>
-      <generic>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
+      <generic> 
+        <int type="int">  0 </int>  <!-- 0 immat -->
+        <int type="int">  0 </int>  <!-- 1 immat -->
+        <int type="int">  0 </int>  <!-- 2 immat -->
+        <int type="int">  0 </int>  <!-- 3 immat -->
+        <int type="int">  0 </int>  <!-- 4 immat -->
+        <int type="int">  0 </int>  <!-- 5 immat -->
+        <int type="bool"> 0 </int>  <!-- 6 smoke -->
+        <int type="int">  0 </int>  <!-- 7 color -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -115,8 +119,10 @@
   </input>
 
   <nasal>
-    <velocity>
+    <doors>
       <file>Aircraft/Velocity-XL/Nasal/doors.nas</file>
+    </doors>
+    <velocity>
       <file>Aircraft/Velocity-XL/Nasal/light.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/velocity.nas</file>
       <file>Aircraft/Velocity-XL/Nasal/liveries.nas</file>
