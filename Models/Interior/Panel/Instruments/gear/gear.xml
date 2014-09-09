@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>gear.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fondgear</object-name>
+    <object-name>switchnutgear</object-name>
+    <object-name>switchgear</object-name>
+    <object-name>testgear</object-name>
+    <object-name>resetgear</object-name>
+    <object-name>redgear</object-name>
+    <object-name>yellowgear</object-name>
+    <object-name>greengear</object-name>
+    <object-name>redgearblack</object-name>
+    <object-name>yellowgearblack</object-name>
+    <object-name>greengearblack</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>switchgear</object-name>
+    <repeatable>false</repeatable>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>controls.gearToggle()</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>redgear</object-name>
+    <!--<object-name>yellowgear</object-name>-->
+    <object-name>greengear</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0.999</value>
+        </greater-than>
+        <greater-than>
+          <property>gear/gear[1]/position-norm</property>
+          <value>0.999</value>
+        </greater-than>
+        <greater-than>
+          <property>gear/gear[2]/position-norm</property>
+          <value>0.999</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>redgearblack</object-name>
+    <object-name>yellowgearblack</object-name>
+    <object-name>greengearblack</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0.001</value>
+        </less-than>
+        <less-than>
+          <property>gear/gear[1]/position-norm</property>
+          <value>0.001</value>
+        </less-than>
+        <less-than>
+          <property>gear/gear[2]/position-norm</property>
+          <value>0.001</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switchgear</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor>22.5</factor>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
