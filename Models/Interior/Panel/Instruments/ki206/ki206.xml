@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- KI 206 
-Bendix/King VOR / LOC / Glideslope Indicator
-Syd Adams
--->
+<!-- KI 206 Bendix/King VOR / LOC / Glideslope Indicator Syd Adams -->
 <PropertyList>
 
   <path>ki206.ac</path>
@@ -22,18 +19,12 @@ Syd Adams
     <object-name>vitre</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Velocity-XL/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>KI206.gsflag</object-name>
@@ -46,7 +37,7 @@ Syd Adams
     <object-name>KI206.gsneedle</object-name>
     <object-name>KI206.knob</object-name>
     <emission>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>controls/switches/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
@@ -59,14 +50,14 @@ Syd Adams
     <condition>
       <or>
         <not>
-          <property>/instrumentation/nav/data-is-valid</property>
+          <property>instrumentation/nav/data-is-valid</property>
         </not>
         <less-than>
-          <property>/systems/electrical/outputs/nav</property>
+          <property>systems/electrical/outputs/nav</property>
           <value>0.1</value>
         </less-than>
         <not>
-          <property>/instrumentation/nav/in-range</property>
+          <property>instrumentation/nav/in-range</property>
         </not>
       </or>
     </condition>
@@ -78,14 +69,14 @@ Syd Adams
     <condition>
       <or>
         <not>
-          <property>/instrumentation/nav/has-gs</property>
+          <property>instrumentation/nav/has-gs</property>
         </not>
         <less-than>
-          <property>/systems/electrical/outputs/nav</property>
+          <property>systems/electrical/outputs/nav</property>
           <value>0.1</value>	
         </less-than>
         <greater-than>
-          <property>/instrumentation/nav/in-range</property>
+          <property>instrumentation/nav/in-range</property>
           <value>30000</value>
         </greater-than>
       </or>
@@ -96,7 +87,7 @@ Syd Adams
     <type>select</type>
     <object-name>KI206.toflag</object-name>
     <condition>
-      <property>/instrumentation/nav/to-flag</property>
+      <property>instrumentation/nav/to-flag</property>
     </condition>
   </animation>
 
@@ -104,14 +95,14 @@ Syd Adams
     <type>select</type>
     <object-name>KI206.fromflag</object-name>
     <condition>
-      <property>/instrumentation/nav/from-flag</property>
+      <property>instrumentation/nav/from-flag</property>
     </condition>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>KI206card</object-name>
-    <property>/instrumentation/nav/radials/selected-deg</property>
+    <property>instrumentation/nav/radials/selected-deg</property>
     <axis>
       <x> 1 </x>
       <y> 0 </y>
@@ -122,7 +113,7 @@ Syd Adams
   <animation>
     <type>translate</type>
     <object-name>KI206.locneedle</object-name>
-    <property>/instrumentation/nav/heading-needle-deflection</property>
+    <property>instrumentation/nav/heading-needle-deflection</property>
     <interpolation>
       <entry><ind> -10 </ind><dep> -0.0113 </dep></entry>
       <entry><ind>   0 </ind><dep>  0.0000 </dep></entry>
@@ -138,7 +129,7 @@ Syd Adams
   <animation>
     <type>translate</type>
     <object-name>KI206.gsneedle</object-name>
-    <property>/instrumentation/nav/gs-needle-deflection</property>
+    <property>instrumentation/nav/gs-needle-deflection</property>
     <interpolation>
       <entry><ind> -9999 </ind><dep> -0.0113 </dep></entry>
       <entry><ind>   -10 </ind><dep> -0.0113 </dep></entry>
@@ -147,79 +138,81 @@ Syd Adams
       <entry><ind>  9999 </ind><dep>  0.0113 </dep></entry>
     </interpolation>
     <axis>
-      <x>0.0</x>
-      <y>0.0</y>
-      <z>1.0</z>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 
-    <animation>
-      <type>rotate</type>
-      <object-name>KI206.knob</object-name>
-      <property>/instrumentation/nav/radials/selected-deg</property>
-      <center>
-        <x-m>  0.000 </x-m>
-        <y-m> -0.037 </y-m>
-        <z-m> -0.037 </z-m>
-      </center>
-      <axis>
-        <x> -1 </x>
-        <y>  0 </y>
-        <z>  0 </z>
-      </axis>
-   </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>KI206.knob</object-name>
+    <property>instrumentation/nav/radials/selected-deg</property>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.033 </y-m>
+      <z-m> -0.033 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
 
-   <animation>
-     <type>pick</type>
-     <object-name>KI206.crsdn</object-name>
-     <visible>0</visible>
-     <action>
-       <button>0</button>
-       <repeatable>true</repeatable>
-       <binding>
-         <command>property-adjust</command>
-         <property>/instrumentation/nav/radials/selected-deg</property>
-         <step>-1</step>
-         <min>0</min>
-         <max>360</max>
-         <wrap>1</wrap>
-       </binding>
-     </action>
-   </animation>
-
-   <animation>
-     <type>pick</type>
-     <object-name>KI206.crsdn</object-name>
-     <visible>0</visible>
-     <action>
-       <button>1</button>
-       <repeatable>true</repeatable>
-       <binding>
-         <command>property-adjust</command>
-         <property>/instrumentation/nav/radials/selected-deg</property>
-         <step>-10</step>
-         <min>0</min>
-         <max>360</max>
-         <wrap>1</wrap>
-       </binding>
-     </action>
-   </animation>
-
-   <animation>
-     <type>pick</type>
-     <object-name>KI206.crsup</object-name>
-     <visible>0</visible>
-     <action>
-       <button>0</button>
-       <repeatable>true</repeatable>
-       <binding>
-         <command>property-adjust</command>
-         <property>/instrumentation/nav/radials/selected-deg</property>
-         <step>1</step>
-         <min>0</min>
-         <max>360</max>
-         <wrap>1</wrap>
-       </binding>
+  <animation>
+    <type>pick</type>
+    <object-name>KI206.crsdn</object-name>
+    <visible>0</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>-10</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>scrollwheel increase</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>decrease</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
     </action>
   </animation>
 
@@ -228,12 +221,50 @@ Syd Adams
     <object-name>KI206.crsup</object-name>
     <visible>0</visible>
     <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
       <button>1</button>
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>instrumentation/nav/radials/selected-deg</property>
         <step>10</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>scrollwheel increase</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>scrollwheel decrease</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <step>-1</step>
         <min>0</min>
         <max>360</max>
         <wrap>1</wrap>

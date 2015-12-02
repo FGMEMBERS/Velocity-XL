@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -42,7 +42,9 @@
     <object-name>phares</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
+    
     <object-name>helice</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
@@ -56,7 +58,9 @@
     <!-- Objets transparents -->
     <object-name>propblur</object-name>
     <object-name>propdisc</object-name>
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
     <object-name>lampe</object-name>
     <object-name>lampeG</object-name>
     <object-name>lampeD</object-name>
@@ -77,7 +81,9 @@
     <object-name>phares</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
+    
     <object-name>helice</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
@@ -91,35 +97,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -137,28 +119,48 @@
     <object-name>phares</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Velocity-XL/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
     <object-name>lampe</object-name>
     <object-name>lampeG</object-name>
     <object-name>lampeD</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitres</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>lampe</object-name>
+    <object-name>lampeG</object-name>
+    <object-name>lampeD</object-name>
     <object-name>propblur</object-name>
     <object-name>propdisc</object-name>
-    <object-name>vitres</object-name>
-    <object-name>lampe</object-name>
-    <object-name>lampeG</object-name>
-    <object-name>lampeD</object-name>
-  </animation>
-
+  </effect>
+  
+  <!-- Interieur -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/Interior/interior.xml</path>
+  </model>
+  
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Velocity-XL/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -1.14 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Cranking effects -->
   <!-- Left -->
   <model>
@@ -167,9 +169,7 @@
       <x-m>  1.594 </x-m>
       <y-m> -0.279 </y-m>
       <z-m> -0.254 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>  45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -179,9 +179,7 @@
       <x-m>  1.594 </x-m>
       <y-m>  0.279 </y-m>
       <z-m> -0.254 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>  45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <pitch-deg> 45 </pitch-deg>
     </offsets>
   </model>
 
@@ -214,25 +212,6 @@
       <y-m>  0.900 </y-m>
       <z-m> -1.200 </z-m>
     </offsets>
-  </model>
-
-  <!-- Interieur -->
-  <model>
-    <path>Aircraft/Velocity-XL/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Une ombre pour OSG -->
-  <model>
-    <name>shadowOSG</name>
-    <path>Aircraft/Velocity-XL/Models/shadow.xml</path>
   </model>
 
   <!-- L'hélice --> 
@@ -279,7 +258,7 @@
     <condition>
       <less-than>
         <property>/engines/engine[0]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -287,6 +266,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceComplete</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>/engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -302,18 +287,18 @@
   </animation>
 
   <!-- Gouverne de direction -->
-    <animation>
+  <animation>
     <type>rotate</type>
     <object-name>directionG</object-name>
     <property>/surface-positions/rudder-pos-norm-left</property>
-    <factor>20</factor>
+    <factor> 15 </factor>
     <axis>
-      <x1-m>  2.594 </x1-m>
-      <y1-m> -4.646 </y1-m>
-      <z1-m>  0.033 </z1-m>
-      <x2-m>  2.928 </x2-m>
-      <y2-m> -4.646 </y2-m>
-      <z2-m>  1.146 </z2-m>
+      <x1-m>  2.61044 </x1-m>
+      <y1-m> -4.64550 </y1-m>
+      <z1-m>  0.03302 </z1-m>
+      <x2-m>  2.93752 </x2-m>
+      <y2-m> -4.64551 </y2-m>
+      <z2-m>  1.14630 </z2-m>
     </axis>
   </animation>
 
@@ -321,14 +306,14 @@
     <type>rotate</type>
     <object-name>directionD</object-name>
     <property>/surface-positions/rudder-pos-norm-right</property>
-    <factor>20</factor>
+    <factor> 15 </factor>
     <axis>
-      <x1-m> 2.594 </x1-m>
-      <y1-m> 4.646 </y1-m>
-      <z1-m> 0.033 </z1-m>
-      <x2-m> 2.928 </x2-m>
-      <y2-m> 4.646 </y2-m>
-      <z2-m> 1.146 </z2-m>
+      <x1-m> 2.61044 </x1-m>
+      <y1-m> 4.64550 </y1-m>
+      <z1-m> 0.03302 </z1-m>
+      <x2-m> 2.93752 </x2-m>
+      <y2-m> 4.64551 </y2-m>
+      <z2-m> 1.14630 </z2-m>
     </axis>
   </animation>
 
@@ -337,11 +322,11 @@
     <type>rotate</type>
     <object-name>profondeur</object-name>
     <property>/controls/flight/elevator</property>
-    <factor>-20.0</factor>
+    <factor> -15 </factor>
     <center>
-      <x-m> -1.877 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.019 </z-m>
+      <x-m> -1.86006 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.01913 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -355,14 +340,14 @@
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>/surface-positions/left-aileron-pos-norm</property>
-    <factor>-20</factor>
+    <factor> 15 </factor>
     <axis>
-      <x1-m>  1.911 </x1-m>
-      <y1-m> -2.578 </y1-m>
-      <z1-m> -0.081 </z1-m>
-      <x2-m>  2.325 </x2-m>
-      <y2-m> -3.938 </y2-m>
-      <z2-m> -0.080 </z2-m>
+      <x1-m>  2.35381 </x1-m>
+      <y1-m> -3.93750 </y1-m>
+      <z1-m> -0.08209 </z1-m>
+      <x2-m>  1.95114 </x2-m>
+      <y2-m> -2.57812 </y2-m>
+      <z2-m> -0.08415 </z2-m>
     </axis>
   </animation>
 
@@ -370,14 +355,14 @@
     <type>rotate</type>
     <object-name>aileronD</object-name>
     <property>/surface-positions/right-aileron-pos-norm</property>
-    <factor>-20</factor>
+    <factor> 15 </factor>
     <axis>
-      <x1-m>  2.325 </x1-m>
-      <y1-m>  3.938 </y1-m>
-      <z1-m> -0.080 </z1-m>
-      <x2-m>  1.911 </x2-m>
-      <y2-m>  2.578 </y2-m>
-      <z2-m> -0.081 </z2-m>
+      <x1-m>  1.95114 </x1-m>
+      <y1-m>  2.57812 </y1-m>
+      <z1-m> -0.08415 </z1-m>
+      <x2-m>  2.35381 </x2-m>
+      <y2-m>  3.93750 </y2-m>
+      <z2-m> -0.08209 </z2-m>
     </axis>
   </animation>
 
@@ -555,9 +540,89 @@
     </axis>
   </animation>
 
+  <!-- Les Portes -->
+  <animation>
+    <name>LaPorteGauche</name>
+    <object-name>porteG</object-name>
+    <object-name>vitreG</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>LaPorteGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>LaPorteGauche</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -110 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.48213 </x-m>
+      <y-m> -0.56954 </y-m>
+      <z-m>  0.39399 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>LaPorteDroite</name>
+    <object-name>porteD</object-name>
+    <object-name>vitreD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>LaPorteDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>LaPorteDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 110 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.48213 </x-m>
+      <y-m>  0.56954 </y-m>
+      <z-m>  0.39399 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
   <!-- Effets lumineux -->
   <model>
-    <name>Beacon</name>
     <path>Aircraft/Velocity-XL/Models/lights/beacon.xml</path>
     <offsets>
       <x-m> 0.433 </x-m>
@@ -567,7 +632,6 @@
   </model>
 
   <model>
-    <name>Red</name>
     <path>Aircraft/Velocity-XL/Models/lights/RedLight.xml</path>
     <offsets>
       <x-m>  2.155 </x-m>
@@ -577,7 +641,16 @@
   </model>
 
   <model>
-    <name>Green</name>
+    <name>LeftWhite</name>
+    <path>Aircraft/Velocity-XL/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  2.100 </x-m>
+      <y-m> -4.684 </y-m>
+      <z-m> -0.069 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/Velocity-XL/Models/lights/GreenLight.xml</path>
     <offsets>
       <x-m>  2.155 </x-m>
@@ -586,26 +659,16 @@
     </offsets>
   </model>
 
-  <animation>
-    <name>AllNavLight</name>
-    <object-name>Beacon</object-name>
-    <object-name>Red</object-name>
-    <object-name>Green</object-name>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>AllNavLight</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/nav-lights</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
-
   <model>
-    <name>White2</name>
+    <path>Aircraft/Velocity-XL/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  2.100 </x-m>
+      <y-m>  4.684 </y-m>
+      <z-m> -0.069 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/Velocity-XL/Models/lights/WhiteLight.xml</path>
     <offsets>
       <x-m>  1.006 </x-m>
@@ -615,7 +678,6 @@
   </model>
 
   <model>
-    <name>White1</name>
     <path>Aircraft/Velocity-XL/Models/lights/WhiteLight.xml</path>
     <offsets>
       <x-m>  1.006 </x-m>
@@ -625,56 +687,6 @@
   </model>
 
   <model>
-    <name>LeftWhite</name>
-    <path>Aircraft/Velocity-XL/Models/lights/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>  2.100 </x-m>
-      <y-m> -4.684 </y-m>
-      <z-m> -0.069 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <name>RightWhite</name>
-    <path>Aircraft/Velocity-XL/Models/lights/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>  2.100 </x-m>
-      <y-m>  4.684 </y-m>
-      <z-m> -0.069 </z-m>
-    </offsets>
-  </model>
-
-  <animation>
-    <name>AllStrobeLight</name>
-    <object-name>LeftWhite</object-name>
-    <object-name>RightWhite</object-name>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>AllStrobeLight</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/strobe-lights</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>White1</object-name>
-    <object-name>White2</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/lights</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
-
-  <model>
-    <name>Landing-Light-L</name>
     <path>Aircraft/Velocity-XL/Models/lights/light-cone.xml</path>
     <offsets>
       <x-m>          0.924 </x-m>
@@ -686,7 +698,6 @@
   </model>
 
   <model>
-    <name>Landing-Light-R</name>
     <path>Aircraft/Velocity-XL/Models/lights/light-cone.xml</path>
     <offsets>
       <x-m>           0.924 </x-m>
@@ -697,22 +708,4 @@
     </offsets>
   </model>
 
-  <animation>
-    <name>AllWingLight</name>
-    <object-name>Landing-Light-L</object-name>
-    <object-name>Landing-Light-R</object-name>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>AllWingLight</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/landing-light</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
-
 </PropertyList>
-

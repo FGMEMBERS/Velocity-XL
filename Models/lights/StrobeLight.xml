@@ -9,6 +9,7 @@
     <object-name>Light</object-name>
   </animation>
   
+  <!-- Transparency for Rembrandt -->
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Light</object-name>
@@ -23,6 +24,14 @@
     <type>billboard</type>
     <object-name>Light</object-name>
     <spherical type="bool">true</spherical>
+  </animation>
+  
+  <animation>
+    <type>select</type>
+    <object-name>Light</object-name>
+    <condition>
+      <property>/sim/model/lights/sbc1/state</property>
+    </condition>
   </animation>
   
   <animation>
@@ -49,7 +58,7 @@
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <property>controls/switches/lights</property>
+      <property>controls/switches/strobe-lights</property>
     </condition>
   </animation>
 

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
- 
-<PropertyList>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
+<PropertyList>
+  
   <fx>
- 
+    
     <crank>
       <name>engstart</name>
       <path>Sounds/engstart.wav</path>
@@ -14,7 +14,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>crank</name>
       <mode>looped</mode>
@@ -31,7 +31,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>cough</name>
       <path>Sounds/coughing.wav</path>
@@ -42,7 +42,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine</name>
       <mode>looped</mode>
@@ -53,8 +53,7 @@
         <factor>0.0285</factor>
         <offset>0.20</offset>
         <!-- these values of min and max are unlikely to be relevant, 
-             because the MAP is unlikely to go below 5" or above 28" 
-        -->
+             because the MAP is unlikely to go below 5" or above 28" -->
         <max>1.0</max>
         <min>0.10</min>
       </volume>
@@ -68,8 +67,8 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
- <click>
+    
+    <click>
       <name>Taxi Light On</name>
       <path>Sounds/click.wav</path>
       <condition>
@@ -79,7 +78,7 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click>
       <name>Taxi Light Off</name>
       <path>Sounds/click.wav</path>
@@ -92,7 +91,7 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click>
       <name>Landing Light On</name>
       <path>Sounds/click.wav</path>
@@ -103,7 +102,7 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click>
       <name>Landing Light Off</name>
       <path>Sounds/click.wav</path>
@@ -116,7 +115,7 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click>
       <name>Nav Light On</name>
       <path>Sounds/click.wav</path>
@@ -127,7 +126,7 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click>
       <name>Nav Light Off</name>
       <path>Sounds/click.wav</path>
@@ -140,7 +139,7 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click>
       <name>Strobe Lights On</name>
       <path>Sounds/click.wav</path>
@@ -151,7 +150,7 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click>
       <name>Strobe Lights Off</name>
       <path>Sounds/click.wav</path>
@@ -164,63 +163,62 @@
         <factor>1.0</factor>
       </volume>
     </click>
-
-
-<click> 
-   <name>Magnetos-off</name>
-   <path>Sounds/click.wav</path>
-   <condition>
-    <not>
-     <property>controls/engines/engine/magnetos</property>
-    </not>
-   </condition>
-   <volume> 
-    <factor>1.0</factor>
-   </volume>
-  </click>
-	 
-  <click> 
-   <name>Magnetos-R</name>
-   <path>Sounds/click.wav</path>
-   <condition>
-    <equals>
-     <property>controls/engines/engine/magnetos</property>
-     <value>1</value>
-    </equals>
-   </condition>
-   <volume> 
-    <factor>1.0</factor>
-   </volume>
-  </click>
-  
-  <click> 
-   <name>Magnetos-L</name>
-   <path>Sounds/click.wav</path>
-   <condition>
-    <equals>
-     <property>controls/engines/engine/magnetos</property>
-     <value>2</value>
-    </equals>
-   </condition>
-   <volume> 
-    <factor>1.0</factor>
-   </volume>
-  </click>
-  
-  <click> 
-   <name>Magnetos-B</name>
-   <path>Sounds/click.wav</path>
-   <condition>
-    <equals>
-     <property>controls/engines/engine/magnetos</property>
-     <value>3</value>
-    </equals>
-   </condition>
-   <volume> 
-    <factor>1.0</factor>
-   </volume>
-  </click>
-
+    
+    <click> 
+      <name>Magnetos-off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/magnetos</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+    
+    <click> 
+      <name>Magnetos-R</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+    
+    <click> 
+      <name>Magnetos-L</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>2</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+    
+    <click> 
+      <name>Magnetos-B</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </equals>
+      </condition>
+      <volume> 
+        <factor>1.0</factor>
+      </volume>
+    </click>
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
@@ -240,11 +238,11 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rumble>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
-      <path>Sounds/gear.wav</path>
+      <path>Aircraft/Velocity-XL/Sounds/gear-up.wav</path>
       <property>/gear/gear[0]/position-norm</property>
       <pitch>
         <internal>dt_play</internal>
@@ -254,7 +252,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -267,7 +265,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -299,7 +297,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
- 
+    
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -311,7 +309,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </flap>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -325,10 +323,10 @@
         <max>1.0</max>
       </volume>
       <volume>
-         <property>/velocities/airspeed-kt</property>
-         <factor>0.0015</factor>
-         <min>0.03</min>
-         <max>0.25</max>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0015</factor>
+        <min>0.03</min>
+        <max>0.25</max>
       </volume>
       <pitch>
         <property>/velocities/airspeed-kt</property>
@@ -338,7 +336,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </wind>
- 
+    
     <stall>
       <name>stall</name>
       <path>Sounds/stall.wav</path>
@@ -350,11 +348,11 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </stall>
-  
+    
     <gear-horn>
       <name>gear-horn</name>
       <mode>looped</mode>
-      <path>Aircraft/c182rg/Sounds/stall-600-chopped.wav</path>
+      <path>Aircraft/Velocity-XL/Sounds/stall-600-chopped.wav</path>
       <condition>
         <and>
           <less-than>
@@ -386,7 +384,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear-horn>
- 
+    
   </fx>
- 
+  
 </PropertyList>

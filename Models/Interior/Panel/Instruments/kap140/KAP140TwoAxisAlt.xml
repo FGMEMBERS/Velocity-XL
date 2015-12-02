@@ -1,24 +1,225 @@
-<?xml version="1.0"?>
-<!--
-_______________________________________________________________________________
-KAP140 Two Axis with Altitude Preselect autopilot instrument.
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-3D version started 2007 by Ron Jensen, wino@jentronics.com.
-Based on 2D version started 2004 by Roy Vegard Ovesen, rvovesen@tiscali.no.
+<!-- KAP140 Two Axis with Altitude Preselect autopilot instrument.
 
-This is an instrument configuration file for the open-source flight
-simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
-FlightGear property list defining the instrument's animations and actions.
+     3D version started 2007 by Ron Jensen, wino@jentronics.com.
+     Based on 2D version started 2004 by Roy Vegard Ovesen, rvovesen@tiscali.no.
 
-Actions are hotspots on the instrument that will respond to a mouse
-click.  Actions always modify the values of properties, either by
-adjusting them, toggling them, or swaping them with other
-properties' values.
+     This is an instrument configuration file for the open-source flight
+     simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+     FlightGear property list defining the instrument's animations and actions.
+
+     Actions are hotspots on the instrument that will respond to a mouse
+     click.  Actions always modify the values of properties, either by
+     adjusting them, toggling them, or swaping them with other
+     properties' values.
 -->
 <PropertyList>
+
   <name>KAP140TwoAxisAlt</name>
   <path>kap140.ac</path>
-<!-- Annunciators -->
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>base</object-name>
+    
+    <object-name>knob-inner</object-name>
+    <object-name>knob-outer</object-name>
+    <object-name>ap-btn</object-name>
+    <object-name>hdg-btn</object-name>
+    <object-name>nav-btn</object-name>
+    <object-name>apr-btn</object-name>
+    <object-name>rev-btn</object-name>
+    <object-name>alt-btn</object-name>
+    <object-name>dn-btn</object-name>
+    <object-name>up-btn</object-name>
+    <object-name>arm-btn</object-name>
+    <object-name>baro-btn</object-name>
+    <object-name>knob-left</object-name>
+    <object-name>knob-right</object-name>
+
+    <object-name>alt-digit1</object-name>
+    <object-name>alt-digit2</object-name>
+    <object-name>alt-digit3</object-name>
+    <object-name>alt-digit4</object-name>
+    <object-name>alt-digit5</object-name>
+    
+    <object-name>vs-digit2</object-name>
+    <object-name>vs-digit3</object-name>
+    <object-name>vs-digit4</object-name>
+    <object-name>vs-digit5</object-name>
+
+    <object-name>vs-minus</object-name>
+    <object-name>vs-digit2-minus</object-name>
+    <object-name>vs-digit3-minus</object-name>
+    <object-name>vs-digit4-minus</object-name>
+    <object-name>vs-digit5-minus</object-name>
+
+    <object-name>hpa-digit2</object-name>
+    <object-name>hpa-digit3</object-name>
+    <object-name>hpa-point</object-name>
+    <object-name>hpa-digit4</object-name>
+    <object-name>hpa-digit5</object-name>
+
+    <object-name>inhg-digit2</object-name>
+    <object-name>inhg-digit3</object-name>
+    <object-name>inhg-point</object-name>
+    <object-name>inhg-digit4</object-name>
+    <object-name>inhg-digit5</object-name>
+
+    <object-name>roll-axis-fail</object-name>
+    <object-name>pitch-axis-fail</object-name>
+    <object-name>nav-arm-ann</object-name>
+    <object-name>apr-arm-ann</object-name>
+    <object-name>rev-arm-ann</object-name>
+    <object-name>alt-arm-ann</object-name>
+    <object-name>gs-arm-ann</object-name>
+    <object-name>hg-ann</object-name>
+    <object-name>ft-ann</object-name>
+    <object-name>fpm-ann</object-name>
+    <object-name>in-ann</object-name>
+    <object-name>alert-ann</object-name>
+    <object-name>hpa-ann</object-name>
+    <object-name>pt-up-ann</object-name>
+    <object-name>pt-ann</object-name>
+    <object-name>pt-down-ann</object-name>
+    <object-name>apr-ann</object-name>
+    <object-name>rol-ann</object-name>
+    <object-name>ap-ann</object-name>
+    <object-name>vs-ann</object-name>
+    <object-name>alt-ann</object-name>
+    <object-name>gs-ann</object-name>
+    <object-name>rev-ann</object-name>
+    <object-name>hdg-ann</object-name>
+    <object-name>nav-ann</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Velocity-XL/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <name>annunciators</name>
+    <object-name>roll-axis-fail</object-name>
+    <object-name>pitch-axis-fail</object-name>
+    <object-name>nav-arm-ann</object-name>
+    <object-name>apr-arm-ann</object-name>
+    <object-name>rev-arm-ann</object-name>
+    <object-name>alt-arm-ann</object-name>
+    <object-name>gs-arm-ann</object-name>
+    <object-name>hg-ann</object-name>
+    <object-name>ft-ann</object-name>
+    <object-name>fpm-ann</object-name>
+    <object-name>in-ann</object-name>
+    <object-name>alert-ann</object-name>
+    <object-name>hpa-ann</object-name>
+    <object-name>pt-up-ann</object-name>
+    <object-name>pt-ann</object-name>
+    <object-name>pt-down-ann</object-name>
+    <object-name>apr-ann</object-name>
+    <object-name>rol-ann</object-name>
+    <object-name>ap-ann</object-name>
+    <object-name>vs-ann</object-name>
+    <object-name>alt-ann</object-name>
+    <object-name>gs-ann</object-name>
+    <object-name>rev-ann</object-name>
+    <object-name>hdg-ann</object-name>
+    <object-name>nav-ann</object-name>
+  </animation>
+
+  <animation>
+    <name>buttons</name>
+    <object-name>ap-btn</object-name>
+    <object-name>hdg-btn</object-name>
+    <object-name>nav-btn</object-name>
+    <object-name>apr-btn</object-name>
+    <object-name>rev-btn</object-name>
+    <object-name>alt-btn</object-name>
+    <object-name>dn-btn</object-name>
+    <object-name>up-btn</object-name>
+    <object-name>arm-btn</object-name>
+    <object-name>baro-btn</object-name>
+  </animation>
+
+  <animation>
+    <name>alt-digits</name>
+    <object-name>alt-digit1</object-name>
+    <object-name>alt-digit2</object-name>
+    <object-name>alt-digit3</object-name>
+    <object-name>alt-digit4</object-name>
+    <object-name>alt-digit5</object-name>
+  </animation>
+
+  <animation>
+    <name>vs-digits</name>
+    <object-name>vs-minus</object-name>
+    <object-name>vs-digit2</object-name>
+    <object-name>vs-digit3</object-name>
+    <object-name>vs-digit4</object-name>
+    <object-name>vs-digit5</object-name>
+  </animation>
+
+  <animation>
+    <name>vs-digits-minus</name>
+    <object-name>vs-digit2-minus</object-name>
+    <object-name>vs-digit3-minus</object-name>
+    <object-name>vs-digit4-minus</object-name>
+    <object-name>vs-digit5-minus</object-name>
+  </animation>
+
+  <animation>
+    <name>hpa-digits</name>
+    <object-name>hpa-digit2</object-name>
+    <object-name>hpa-digit3</object-name>
+    <object-name>hpa-digit4</object-name>
+    <object-name>hpa-digit5</object-name>
+  </animation>
+
+  <animation>
+    <name>inhg-digits</name>
+    <object-name>inhg-digit2</object-name>
+    <object-name>inhg-digit3</object-name>
+    <object-name>inhg-digit4</object-name>
+    <object-name>inhg-digit5</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>buttons</object-name>
+    <object-name>alt-digits</object-name>
+    <object-name>vs-digits</object-name>
+    <object-name>vs-digits-minus</object-name>
+    <object-name>hpa-digits</object-name>
+    <object-name>inhg-digits</object-name>
+    <object-name>annunciators</object-name>
+    <emission>
+      <factor-prop>controls/switches/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>knob-outer</object-name>
+    <object-name>knob-inner</object-name>
+    <object-name>base</object-name>
+    <object-name>buttons</object-name>
+    <emission>
+      <factor-prop>controls/switches/instrument-lights</factor-prop>
+      <red>   0.2 </red>
+      <green> 0.1 </green>
+      <blue>  0.1 </blue>
+    </emission>
+  </animation>
+
+  <!-- Annunciators -->
   <animation>
     <type>select</type>
     <object-name>pitch-axis-fail</object-name>
@@ -28,6 +229,7 @@ properties' values.
       <value type="bool">true</value>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>roll-axis-fail</object-name>
@@ -37,6 +239,7 @@ properties' values.
       <value type="bool">true</value>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>ap-ann</object-name>
@@ -48,6 +251,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>rol-ann</object-name>
@@ -59,6 +263,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>hdg-ann</object-name>
@@ -70,6 +275,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>nav-ann</object-name>
@@ -81,6 +287,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>nav-arm-ann</object-name>
@@ -92,6 +299,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>apr-ann</object-name>
@@ -103,6 +311,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>apr-arm-ann</object-name>
@@ -114,6 +323,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>rev-ann</object-name>
@@ -125,6 +335,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>rev-arm-ann</object-name>
@@ -136,6 +347,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>vs-ann</object-name>
@@ -147,6 +359,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>alt-ann</object-name>
@@ -158,6 +371,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>alt-arm-ann</object-name>
@@ -169,6 +383,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>alert-ann</object-name>
@@ -180,6 +395,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>gs-ann</object-name>
@@ -191,6 +407,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>gs-arm-ann</object-name>
@@ -202,6 +419,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>pt-ann</object-name>
@@ -223,6 +441,7 @@ properties' values.
       </or>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>pt-up-ann</object-name>
@@ -236,6 +455,7 @@ properties' values.
       </and>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>pt-down-ann</object-name>
@@ -249,7 +469,8 @@ properties' values.
       </and>
     </condition>
   </animation>
-<!-- vs-setting -->
+
+  <!-- vs-setting -->
   <animation>
     <type>select</type>
     <object-name>fpm-ann</object-name>
@@ -261,6 +482,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>vs-minus</object-name>
@@ -278,6 +500,7 @@ properties' values.
       </and>
     </condition>
   </animation>
+
   <animation>
     <type>select</type>
     <object-name>vs-digits</object-name>
@@ -294,6 +517,7 @@ properties' values.
       </and>
     </condition>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit5</object-name>
@@ -313,6 +537,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit4</object-name>
@@ -332,6 +557,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit3</object-name>
@@ -351,6 +577,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit2</object-name>
@@ -370,6 +597,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit5-minus</object-name>
@@ -389,6 +617,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit4-minus</object-name>
@@ -408,6 +637,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit3-minus</object-name>
@@ -427,6 +657,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>vs-digit2-minus</object-name>
@@ -446,7 +677,8 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
-<!-- alt-setting -->
+
+  <!-- alt-setting -->
   <animation>
     <type>select</type>
     <object-name>alt-digits</object-name>
@@ -459,6 +691,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit1</object-name>
@@ -471,6 +704,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit2</object-name>
@@ -483,6 +717,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit3</object-name>
@@ -495,6 +730,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit4</object-name>
@@ -507,6 +743,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>alt-digit5</object-name>
@@ -519,7 +756,8 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
-<!-- baro-setting-hpa -->
+
+  <!-- baro-setting-hpa -->
   <animation>
     <type>select</type>
     <object-name>hpa-digits</object-name>
@@ -532,6 +770,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>hpa-digit2</object-name>
@@ -545,6 +784,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>hpa-digit3</object-name>
@@ -558,6 +798,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>hpa-digit3</object-name>
@@ -571,6 +812,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>hpa-digit4</object-name>
@@ -585,7 +827,8 @@ properties' values.
     </axis>
   </animation>
 
-    <name>Baro Setting hPa number</name>
+<!--
+  <name>Baro Setting hPa number</name>
     <condition>
       <equals>
         <property>/autopilot/KAP140/annunciators/bs-hpa-number</property>
@@ -598,8 +841,9 @@ properties' values.
       <scale>1</scale>
       <format>%01.3f</format>
     </chunk>
+-->
 
-<!-- baro-setting-inhg -->
+  <!-- baro-setting-inhg -->
   <animation>
     <type>select</type>
     <object-name>inhg-digits</object-name>
@@ -613,6 +857,7 @@ properties' values.
       </equals>
     </condition>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>inhg-digit2</object-name>
@@ -626,6 +871,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>inhg-digit3</object-name>
@@ -639,6 +885,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>inhg-digit4</object-name>
@@ -652,6 +899,7 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
+
   <animation>
     <type>textranslate</type>
     <object-name>inhg-digit5</object-name>
@@ -665,7 +913,8 @@ properties' values.
       <z>0</z>
     </axis>
   </animation>
-<!-- Actions -->
+
+  <!-- Actions -->
   <animation>
     <type>pick</type>
     <object-name>ap-btn</object-name>
@@ -680,6 +929,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>hdg-btn</object-name>
@@ -694,6 +944,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>nav-btn</object-name>
@@ -708,6 +959,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>apr-btn</object-name>
@@ -722,6 +974,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>alt-btn</object-name>
@@ -736,6 +989,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>rev-btn</object-name>
@@ -750,6 +1004,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>dn-btn</object-name>
@@ -764,6 +1019,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>up-btn</object-name>
@@ -778,6 +1034,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>arm-btn</object-name>
@@ -792,6 +1049,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>baro-btn</object-name>
@@ -815,6 +1073,7 @@ properties' values.
       </mod-up>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>knob-inner</object-name>
@@ -835,6 +1094,7 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>knob-outer</object-name>
@@ -859,6 +1119,7 @@ properties' values.
   <animation>
     <type>pick</type>
     <object-name>knob-left</object-name>
+    <visible>false</visible>
     <action>
       <name>Knob small down</name>
       <button>0</button>
@@ -876,9 +1137,11 @@ properties' values.
       </binding>
     </action>
   </animation>
+
   <animation>
     <type>pick</type>
     <object-name>knob-right</object-name>
+    <visible>false</visible>
     <action>
       <name>Knob small up</name>
       <button>0</button>
@@ -896,20 +1159,5 @@ properties' values.
       </binding>
     </action>
   </animation>
-
-
   
-  <animation>
-    <type>material</type>
-    <object-name>knob-outer</object-name>
-    <object-name>knob-inner</object-name>
-    <object-name>base</object-name>
-    <object-name>buttons</object-name>
-    <emission>
-      <red>0.75</red>
-      <green>0.25</green>
-      <blue>0.10</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
-    </emission>
-  </animation>
 </PropertyList>
