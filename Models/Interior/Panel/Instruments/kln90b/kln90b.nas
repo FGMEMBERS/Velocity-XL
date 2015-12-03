@@ -332,4 +332,3 @@ var update_gps = func {
     Gps.draw_display();
     settimer(update_gps,0);
 }
-

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -9,23 +9,30 @@
     <object-name>interieur</object-name>
     <object-name>siege1</object-name>
     <object-name>siege2</object-name>
-
+    <object-name>intporteG</object-name>
+    <object-name>intporteD</object-name>
+    
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>intvitreD</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Velocity-XL/Models/Effects/Glass/glass</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitreG</object-name>
+    <object-name>intvitreD</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
+    <object-name>intvitreG</object-name>
+    <object-name>intvitreD</object-name>
+  </effect>
+  
   <!-- Planche de bord -->
   <model>
     <path>Aircraft/Velocity-XL/Models/Interior/Panel/panel.xml</path>
@@ -56,5 +63,85 @@
     </offsets>
   </model>
   
+  <!-- Les Portes -->
+  <animation>
+    <name>IntLaPorteGauche</name>
+    <object-name>intporteG</object-name>
+    <object-name>intvitreG</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntLaPorteGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorteGauche</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -110 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.48213 </x-m>
+      <y-m> -0.56954 </y-m>
+      <z-m>  0.39399 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>IntLaPorteDroite</name>
+    <object-name>intporteD</object-name>
+    <object-name>intvitreD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntLaPorteDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorteDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 110 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.48213 </x-m>
+      <y-m>  0.56954 </y-m>
+      <z-m>  0.39399 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
 </PropertyList>
-

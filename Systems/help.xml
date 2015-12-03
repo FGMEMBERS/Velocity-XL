@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <title>Velocity-XL</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>d</name>
+    <desc>Open/Close left door</desc>
+  </key>
+  <key>
+    <name>D</name>
+    <desc>Open/Close right door</desc>
+  </key>
+  <key>
+    <name>l</name>
+    <desc>Landing light</desc>
+  </key>
+  <key>
+    <name>Ctrl b</name>
+    <desc>Air brake</desc>
+  </key>
+  
+</PropertyList>

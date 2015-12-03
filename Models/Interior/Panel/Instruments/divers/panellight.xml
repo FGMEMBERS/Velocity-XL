@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panellight.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>button</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>button</object-name>
+    <action>
+      <button>4</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/switches/panel-light</property>
+        <step>0.05</step>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+    </action>
+    <action>
+      <button>3</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/switches/panel-light</property>
+        <step>-0.05</step>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>button</object-name>
+    <property>controls/switches/panel-light</property>
+    <factor> -270 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
