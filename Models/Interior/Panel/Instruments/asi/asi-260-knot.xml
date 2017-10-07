@@ -34,7 +34,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>/velocities/airspeed-kt</property>
+    <property>velocities/airspeed-kt</property>
     <interpolation>
       <entry><ind>  10 </ind><dep>    3 </dep></entry>
       <entry><ind>  40 </ind><dep>   13 </dep></entry>

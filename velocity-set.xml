@@ -16,7 +16,22 @@
       <cockpit type="int"> 3 </cockpit>
       <model type="int">   4 </model>
     </rating>
-    
+   
   </sim>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <name type="string">Sump tank</name>
+        <hidden type="bool">true</hidden>
+      </tank>
+      <tank n="1">
+        <name type="string">Left wing tank</name>
+      </tank>
+      <tank n="2">
+        <name type="string">Right wing tank</name>
+      </tank>
+    </fuel>
+  </consumables>
 
 </PropertyList>

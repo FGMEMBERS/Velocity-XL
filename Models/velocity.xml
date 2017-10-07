@@ -229,7 +229,7 @@
     <object-name>propdisc</object-name>
     <condition>
       <greater-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>1500</value>
       </greater-than>
     </condition>
@@ -241,11 +241,11 @@
     <condition>
     <and>
       <greater-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>600.000</value>
       </greater-than>
       <less-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>1500.001</value>
       </less-than>
     </and>
@@ -257,7 +257,7 @@
     <object-name>helice</object-name>
     <condition>
       <less-than>
-        <property>/engines/engine[0]/rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <value>1500</value>
       </less-than>
     </condition>
@@ -272,7 +272,7 @@
         <value> 5 </value>
       </greater-than>
     </condition>
-    <property>/engines/engine[0]/rpm</property>
+    <property>engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
       <x-m> 2.295 </x-m>
@@ -290,7 +290,7 @@
   <animation>
     <type>rotate</type>
     <object-name>directionG</object-name>
-    <property>/surface-positions/rudder-pos-norm-left</property>
+    <property>surface-positions/rudder-pos-norm-left</property>
     <factor> 15 </factor>
     <axis>
       <x1-m>  2.61044 </x1-m>
@@ -305,7 +305,7 @@
   <animation>
     <type>rotate</type>
     <object-name>directionD</object-name>
-    <property>/surface-positions/rudder-pos-norm-right</property>
+    <property>surface-positions/rudder-pos-norm-right</property>
     <factor> 15 </factor>
     <axis>
       <x1-m> 2.61044 </x1-m>
@@ -321,7 +321,7 @@
   <animation>
     <type>rotate</type>
     <object-name>profondeur</object-name>
-    <property>/controls/flight/elevator</property>
+    <property>controls/flight/elevator</property>
     <factor> -15 </factor>
     <center>
       <x-m> -1.86006 </x-m>
@@ -339,7 +339,7 @@
   <animation>
     <type>rotate</type>
     <object-name>aileronG</object-name>
-    <property>/surface-positions/left-aileron-pos-norm</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor> 15 </factor>
     <axis>
       <x1-m>  2.35381 </x1-m>
@@ -354,7 +354,7 @@
   <animation>
     <type>rotate</type>
     <object-name>aileronD</object-name>
-    <property>/surface-positions/right-aileron-pos-norm</property>
+    <property>surface-positions/right-aileron-pos-norm</property>
     <factor> 15 </factor>
     <axis>
       <x1-m>  1.95114 </x1-m>
@@ -371,7 +371,7 @@
     <type>rotate</type>
     <object-name>axeA</object-name>
     <object-name>roueA</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep> 94 </dep></entry>
       <entry><ind> 0.1 </ind><dep> 94 </dep></entry>
@@ -392,7 +392,7 @@
   <animation>
     <type>rotate</type>
     <object-name>porteAG</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
       <entry><ind> 0.1 </ind><dep> -130 </dep></entry>
@@ -411,7 +411,7 @@
   <animation>
     <type>rotate</type>
     <object-name>porteAD</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.1 </ind><dep> 130 </dep></entry>
@@ -431,7 +431,7 @@
     <type>rotate</type>
     <object-name>axeG</object-name>
     <object-name>roueG</object-name>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 90 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
@@ -452,7 +452,7 @@
     <type>rotate</type>
     <object-name>axeD</object-name>
     <object-name>roueD</object-name>
-    <property>/gear/gear[2]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 90 </dep></entry>
       <entry><ind> 1 </ind><dep>  0 </dep></entry>
@@ -474,7 +474,7 @@
     <type>rotate</type>
     <object-name>axeA</object-name>
     <object-name>roueA</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor> 20.0 </factor>
     <center>
       <x-m> -1.869 </x-m>
@@ -492,7 +492,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueG</object-name>
-    <property>/gear/gear[0]/rollspeed-ms</property>
+    <property>gear/gear[0]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m>  0.899 </x-m>
@@ -509,7 +509,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueD</object-name>
-    <property>/gear/gear[1]/rollspeed-ms</property>
+    <property>gear/gear[1]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m>  0.899 </x-m>
@@ -526,7 +526,7 @@
   <animation>
     <type>spin</type>
     <object-name>roueA</object-name>
-    <property>/gear/gear[2]/rollspeed-ms</property>
+    <property>gear/gear[2]/rollspeed-ms</property>
     <factor> 30 </factor>
     <center>
       <x-m> -2.118 </x-m>

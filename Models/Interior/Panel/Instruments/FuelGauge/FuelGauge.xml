@@ -36,7 +36,7 @@
     <type>rotate</type>
     <object-name>PtrL</object-name>
     <object-name>PtrTipL</object-name>
-    <property>/consumables/fuel/tank[0]/level-lbs</property>
+    <property>consumables/fuel/tank[1]/level-lbs</property>
     <interpolation>
       <entry><ind>  0.000 </ind><dep>  0.0 </dep></entry>
       <entry><ind> 31.747 </ind><dep> 33.0 </dep></entry>
@@ -59,7 +59,7 @@
     <type>rotate</type>
     <object-name>PtrR</object-name>
     <object-name>PtrTipR</object-name>
-    <property>/consumables/fuel/tank[1]/level-lbs</property>
+    <property>consumables/fuel/tank[2]/level-lbs</property>
     <interpolation>
       <entry><ind>  0.000 </ind><dep>  0.0 </dep></entry>
       <entry><ind> 31.747 </ind><dep> 33.0 </dep></entry>

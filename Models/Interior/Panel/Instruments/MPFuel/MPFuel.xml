@@ -35,7 +35,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>MPPtr</object-name>
-    <property>/engines/engine/mp-inhg</property>
+    <property>engines/engine/mp-inhg</property>
     <interpolation>
       <entry><ind> 10 </ind><dep>   0 </dep></entry>
       <entry><ind> 35 </ind><dep> 150 </dep></entry>
@@ -52,7 +52,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>FFPtr</object-name>
-    <property>/engines/engine/fuel-flow-gph</property>
+    <property>engines/engine/fuel-flow-gph</property>
     <interpolation>
      <entry><ind>  1.32 </ind><dep>   0 </dep></entry>
      <entry><ind>  5.28 </ind><dep>  11 </dep></entry>
