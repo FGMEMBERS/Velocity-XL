@@ -10,35 +10,35 @@
         <label>Autostart</label>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/electric/battery-switch</property>
+          <property>controls/electric/battery-switch</property>
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/electric/engine/generator</property>
+          <property>controls/electric/engine/generator</property>
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/switches/instrument-lights</property>
+          <property>controls/switches/instrument-lights</property>
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/switches/nav-lights</property>
+          <property>controls/switches/nav-lights</property>
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/switches/lights</property>
+          <property>controls/switches/lights</property>
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/anti-ice/engine[0]/carb-heat</property>
+          <property>controls/anti-ice/engine[0]/carb-heat</property>
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/engines/engine[0]/fuel-pump</property>
+          <property>controls/engines/engine[0]/fuel-pump</property>
         </binding>
         <binding>
           <command>property-assign</command>
-          <property>/controls/engines/engine[0]/magnetos</property>
+          <property>controls/engines/engine[0]/magnetos</property>
           <value>3</value>
         </binding>
         <binding>

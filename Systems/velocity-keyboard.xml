@@ -27,7 +27,7 @@
       <desc>Landing light</desc>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/landing-light</property>
+        <property>controls/switches/landing-light</property>
       </binding>
     </key>
     

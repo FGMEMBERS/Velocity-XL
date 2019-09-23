@@ -36,7 +36,7 @@
       <button>0</button>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine/magnetos</property>
+        <property>controls/engines/engine/magnetos</property>
         <step>-1</step>
         <min>0</min>
         <max>3</max>
@@ -52,7 +52,7 @@
       <button>0</button>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine/magnetos</property>
+        <property>controls/engines/engine/magnetos</property>
         <step>1</step>
         <min>0</min>
         <max>3</max>
@@ -70,7 +70,7 @@
       <button>0</button>
       <binding>
         <command>property-assign</command>
-        <property>/controls/switches/starter</property>
+        <property>controls/switches/starter</property>
         <value type="int">1</value>
       </binding>
       <binding>
@@ -80,7 +80,7 @@
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/controls/switches/starter</property>
+          <property>controls/switches/starter</property>
           <value type="int">0</value>
         </binding>
         <binding>
@@ -96,7 +96,7 @@
     <name>mags-key</name>
     <type>rotate</type>
     <object-name>key</object-name>
-    <property>/controls/engines/engine/magnetos</property>
+    <property>controls/engines/engine/magnetos</property>
     <factor>30</factor>
     <axis>
       <x> -1 </x>
@@ -110,7 +110,7 @@
     <object-name>key</object-name>
     <condition>
       <not>
-        <property>/controls/switches/starter</property>
+        <property>controls/switches/starter</property>
       </not>
     </condition>
   </animation>
@@ -119,7 +119,7 @@
     <type>select</type>
     <object-name>start</object-name>
     <condition>
-      <property>/controls/switches/starter</property>
+      <property>controls/switches/starter</property>
     </condition>
   </animation>        
   

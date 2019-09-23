@@ -681,7 +681,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>/instrumentation/kns-80/volume-adjust</property>
+        <property>instrumentation/kns-80/volume-adjust</property>
         <value>-1</value>
       </binding>
     </action>
@@ -696,7 +696,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>/instrumentation/kns-80/volume-adjust</property>
+        <property>instrumentation/kns-80/volume-adjust</property>
         <value>1</value>
       </binding>
     </action>
@@ -711,7 +711,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>/instrumentation/kns-80/data-adjust</property>
+        <property>instrumentation/kns-80/data-adjust</property>
         <value>-1</value>
       </binding>
     </action>
@@ -726,7 +726,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>/instrumentation/kns-80/data-adjust</property>
+        <property>instrumentation/kns-80/data-adjust</property>
         <value>1</value>
       </binding>
     </action>
@@ -741,7 +741,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>/instrumentation/kns-80/data-adjust</property>
+        <property>instrumentation/kns-80/data-adjust</property>
         <value>-10</value>
       </binding>
     </action>
@@ -756,7 +756,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>/instrumentation/kns-80/data-adjust</property>
+        <property>instrumentation/kns-80/data-adjust</property>
         <value>10</value>
       </binding>
     </action>

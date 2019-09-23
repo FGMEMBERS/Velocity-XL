@@ -35,7 +35,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>PtrL</object-name>
-    <property>/engines/engine/egt-degf</property>
+    <property>engines/engine/egt-degf</property>
     <interpolation>
       <entry><ind> 1200 </ind><dep>  0 </dep></entry>
       <entry><ind> 1750 </ind><dep> 85 </dep></entry>
@@ -55,7 +55,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>PtrR</object-name>
-    <property>/environment/temperature-degc</property>
+    <property>environment/temperature-degc</property>
     <interpolation>
      <entry><ind> -20 </ind><dep>  0.0 </dep></entry>
      <entry><ind>   0 </ind><dep> 21.0 </dep></entry>
